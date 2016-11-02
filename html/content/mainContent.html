@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>梦心App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/icons-extra.css" />
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			ul,li{
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			.mui-bar .mui-pull-left .mui-icon {
+				padding-right: 5px;
+				font-size: 28px;
+			}
+			.mui-bar .mui-btn {
+				font-weight: normal;
+				font-size: 17px;
+			}
+			.mui-bar .mui-btn-link {
+				top: 1px;
+			}
+			h5{
+		        padding-top: 8px;
+		        padding-bottom: 4px;
+		        text-indent: 12px;
+		    }
+		    img.mui-media-object{
+		    	width: 100%;
+		    	min-height: 100px;
+		    	max-height: 100px;
+		    }
+		</style>
+	</head>
+
+	<body>
+
+		<header id="header" class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left"><span class="mui-icon mui-icon-left-nav"></span>返回</a>
+			<h1 class="mui-title">其它</h1>
+		</header>
+
+		<div class="mui-content">
+		    <h5>宇宙哲言</h5>
+		    <ul class="mui-table-view mui-grid-view" style="background-color:#fff">
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" src="../../img/eg/F2.jpg">
+		                <div class="mui-media-body">无边宇宙景观</div>
+		            </a>
+		        </li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" src="../../img/eg/F6.jpg">
+		                <div class="mui-media-body">毁灭只是一切的开始</div>
+		            </a>
+		        </li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#"><img class="mui-media-object" src="../../img/eg/F5.jpg">
+		                <div class="mui-media-body">无垠星河散发着璀璨的光亮</div>
+		            </a>
+		        </li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" src="../../img/eg/F1.jpg">
+		                <div class="mui-media-body">静静看这世界</div>
+		            </a>
+		        </li>
+		    </ul>    
+		</div>
+		
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			var recentHref="";
+			mui.back = function() {
+				var recentView=plus.webview.getWebviewById(recentHref);
+				if(recentView){
+					recentView.close('slide-out-right');
+				}
+				else{
+					plus.webview.close(plus.webview.currentWebview(),'slide-out-right');
+					plus.webview.show(plus.webview.getWebviewById('html/main/main.html'));
+				}
+			};
+			
+			/*mui('#webSite').on('tap', 'a', function() {
+				recentHref = this.getAttribute('href');
+				plus.webview.open(recentHref,recentHref,{top:'41px',bottom:'0px'}).show();
+			});*/
+		</script>
+	</body>
+</html>

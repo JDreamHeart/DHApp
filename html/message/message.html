@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>梦心App</title>
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../../css/icons-extra.css" />
+		<link rel="stylesheet" href="../../css/appMain.css" />
+		<style type="text/css">
+		#latelyMessageList>li>a{
+			display: block;
+			height: 80px;
+			font-size: 17px;
+		}
+		#latelyMessageList>li>a>span{
+			margin: 16px 6px;
+			color: #0069FF;
+		}
+		#latelyMessageList>li>a>img{
+			margin-right: 36px;
+		}
+		li.mui-table-view-cell>a{
+			border-bottom: 1px #D1D1D1 solid;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="mui-content">
+			<div class="mui-slider">
+				<div class="messageHead mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item mui-active" href="#friendMessage">好友私信<span class="mui-badge mui-badge-red mui-badge-inverted messageSpanFont"></span></a>
+					<a class="mui-control-item" href="#systemMessage">系统通知<span class="mui-badge mui-badge-red mui-badge-inverted messageSpanFont"></span></a>
+				</div>
+				<div class="mui-slider-progress-bar mui-col-xs-6"></div>
+				<div class="mui-slider-group">
+					<div id="friendMessage" class="friendMessage mui-slider-item mui-control-content mui-active">
+						<ul id="latelyMessageList" class="mui-table-view mui-hidden">
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="friendMessage.html">
+									<span class="mui-icon mui-icon-list mui-pull-left"></span>
+									<span class="mui-pull-left">查看最近好友私信</span>
+									<img class="mui-pull-right" src="../../img/user/theimg.jpeg" alt="" />
+								</a>
+							</li>
+						</ul>
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="friendMessage.html">
+									<img src="../../img/eg/F1.jpg" alt="" />
+									<span class="friendMessageSpan">
+										你的好友<strong>小Z</strong>发来
+										<span class="mui-badge mui-badge-inverted mui-badge-red messageSpanFont">1</span>
+										条消息
+									</span>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="friendMessage.html">
+									<img src="../../img/eg/F8.jpg" alt="" />
+									<span class="friendMessageSpan">
+										你的好友<strong>小Y</strong>发来
+										<span class="mui-badge mui-badge-inverted mui-badge-red messageSpanFont">1</span>
+										条消息
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div id="systemMessage" class="systemMessage mui-slider-item mui-control-content">
+						<div class="mui-table-view">
+							<div class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="notice.html">
+									<span class="mui-icon-extra mui-icon-extra-notice sysMessageAIcon"></span>
+									通知
+									<span class="mui-badge mui-badge-inverted mui-badge-red messageSpanFont"></span>
+								</a>
+							</div>
+						</div>
+						<div class="mui-table-view">
+							<div class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="follow.html">
+									<span class="mui-icon mui-icon-starhalf sysMessageAIcon"></span>
+									关注
+									<span class="mui-badge mui-badge-inverted mui-badge-red messageSpanFont"></span>
+								</a>
+							</div>
+						</div>
+						<div class="mui-table-view">
+							<div class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="appreciate.html">
+									<span class="mui-icon-extra mui-icon-extra-like sysMessageAIcon"></span>
+									赞
+									<span class="mui-badge mui-badge-inverted mui-badge-red messageSpanFont"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script>
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			var page_style = {
+				top: '0',
+				bottom: '0'
+			};
+			mui('.mui-table-view-cell').on('tap', 'a', function(e) {
+				var targetTab = this.getAttribute('href');
+				if(!plus.webview.getWebviewById(targetTab))
+				{
+					plus.webview.create(targetTab, targetTab, page_style);
+				}
+				//显示目标选项卡
+				plus.webview.show(targetTab,'pop-in');
+				plus.webview.hide(plus.webview.getWebviewById('html/message/message.html'));
+			});
+		</script>
+	</body>
+</html>

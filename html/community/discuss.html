@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>梦心App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/icons-extra.css" />
+		<style type="text/css">
+			.mui-content a{
+				color: #333333;
+			}
+			.mui-content a:visited{
+				color: #6641E2;
+			}
+			.mui-content a:active{
+				color: #6641E2;
+			}
+			.mui-table-view{
+				background-color: inherit;
+			}
+			img.mui-media-object{
+				min-width: 160px;
+				min-height: 120px;
+				max-width: 100%;
+				max-height: 240px;
+				border-radius: 3px;
+			}
+			.mui-table-view-cell{
+				margin-bottom: 12px;
+				background-color: #FFFFFF;
+			}
+			.mui-table-view-cell>a{
+				border-bottom: 1px #CCCCCC solid;
+			}
+			.mui-table-view-cell div.mui-clearfix{
+				padding-bottom: 10px;
+				margin-bottom: 20px;
+			}
+			.mui-table-view-cell div.mui-clearfix:first-of-type{
+				border-bottom: 1px #E0E0E0 solid;
+			}
+			.mui-table-view-cell div.mui-clearfix:last-of-type{
+				margin-bottom: 0;
+			}
+			.itemHead>span.mui-pull-left{
+				margin-top: 6px;
+			}
+			.itemHead>span.mui-pull-right{
+				font-size: 15px;
+				margin-top: 8px;
+			}
+			.itemBody>.mui-media-body{
+				margin-top: -10px;
+			}
+			.itemBody>.mui-media-body{
+				color: #0060DD;
+				margin-top: -10px;
+				margin-bottom: 10px;
+			}
+			.itemBody>.mui-media-body>p{
+				white-space: normal;
+				color: #363636;
+				margin-top: 4px;
+			}
+			.userLink{
+				display: block;
+				margin-top: 4px;
+				margin-bottom: -6px;
+				font-size: 13px;
+				color: #989898;
+			}
+			.userLink>span{
+				font-size: 18px;
+			}
+			.userLink>.mui-icon-extra{
+				margin-left: 20px;
+				font-size: 14px;
+			}
+			.userLink>.mui-badge{
+				font-size: 14px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left"><span class="mui-icon mui-icon-left-nav"></span>返回</a>
+			<span class="mui-title">讨论区</span>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<div class="itemHead mui-clearfix" style="color: #989898;">
+							<span class="mui-pull-left">JS技术区</span>
+							<span class="mui-pull-right">2016-10-26</span>
+						</div>
+						<div class="itemBody">
+							<div class="mui-media-body">
+								幸福
+								<p>能和心爱的人一起过日子，是件幸福的事情；可是，人在何方？</p>
+							</div>
+							<img class="mui-media-object" src="../../img/eg/F3.jpg">
+							<div class="userLink">
+								<span class="mui-icon mui-icon-person-filled"></span>梦心DH
+								<span class="mui-icon-extra mui-icon-extra-comment"></span>
+								<span class="mui-badge mui-badge-blue mui-badge-inverted">0</span>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<div class="mui-clearfix" style="color: #989898;">
+							<span class="mui-pull-left">游戏区</span>
+							<span class="mui-pull-right">2016-10-26</span>
+						</div>
+						<div class="itemBody">
+							<div class="mui-media-body">
+								幸福
+								<p>能和心爱的人一起过日子，是件幸福的事情；可是，人在何方？</p>
+							</div>
+							<img class="mui-media-object" src="../../img/eg/F3.jpg">
+							<div class="userLink">
+								<span class="mui-icon mui-icon-person-filled"></span>树欲静而风不止
+								<span class="mui-icon-extra mui-icon-extra-comment"></span>
+								<span class="mui-badge mui-badge-blue mui-badge-inverted">0</span>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			//mui初始化
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			mui.back = function() {
+					plus.webview.hide(plus.webview.currentWebview(),'slide-out-right');
+					plus.webview.show(plus.webview.getWebviewById('html/community/community.html'));
+			};
+		</script>
+	</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>梦心App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			ul,li{
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			.mui-fullscreen {
+				position: fixed;
+				z-index: 20;
+				background-color: #111;
+				opacity: 0.9;
+			}
+			.mui-bar .mui-pull-left .mui-icon {
+				padding-right: 5px;
+				font-size: 28px;
+			}
+			
+			.mui-bar .mui-btn {
+				font-weight: normal;
+				font-size: 17px;
+			}
+			
+			.mui-bar .mui-btn-link {
+				top: 1px;
+			}
+			
+			.mui-content img{
+				width: 100%;
+				height: 210px;
+			}
+			p{
+				font-size: 16px;
+				text-indent: 2em;
+				color: #727272;
+				margin-bottom: 15px;
+			}
+			.mainContent{
+				margin: 0 15px;
+			}
+			.mainContent>a{
+				display: block;
+			}
+			.mainContent img{
+				width: 100%;
+				height: auto;
+			}
+			.introduce{
+				margin-top: 10px;
+			}
+			.skill{
+				color: #727272;
+				margin-top: 10px;
+			}
+			.skill>p{
+				margin-bottom: 0;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+
+		<header id="header" class="mui-bar mui-bar-transparent">
+			<a class="mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left"><span class="mui-icon mui-icon-left-nav"></span>返回</a>
+			<h1 class="mui-title">前端知识</h1>
+		</header>
+
+		<div class="mui-content">
+			<div id="slider" class="mui-slider" >
+			  <div class="mui-slider-group mui-slider-loop">
+			    <div class="mui-slider-item mui-slider-item-duplicate">
+			        <img src="../../img/eg/F7.jpg">
+				</div>
+			    <!-- 第一张 -->
+			    <div class="mui-slider-item">
+			      <a href="javascript:;">
+			        <img src="../../img/eg/F2.jpg">
+			      </a>
+			    </div>
+			    <!-- 第二张 -->
+			    <div class="mui-slider-item">
+			      <a href="javascript:;">
+			        <img src="../../img/eg/F7.jpg">
+			      </a>
+			    </div>
+			    <div class="mui-slider-item mui-slider-item-duplicate">
+			        <img src="../../img/eg/F2.jpg">
+				</div>
+			  </div>
+			  <div class="mui-slider-indicator">
+			    <div class="mui-indicator mui-active"></div>
+			    <div class="mui-indicator"></div>
+			  </div>
+			</div>
+			
+			<div class="mainContent">
+				<div class="introduce">
+					<p>
+						前端对于网站来说，通常是指网站的前台部分，包括网站的表现层和结构层。
+					</p>
+					网站前端
+					<p>
+						前端对于网站来说，通常是指，网站的前台部分包括网站的表现层和结构层。
+						因此前端技术一般分为前端设计和前端开发，前端设计一般可以理解为网站的视觉设计，前端开发则是网站的前台代码实现，包括基本的HTML和CSS以及JavaScript/ajax，现在最新的高级版本HTML5、CSS3，以及SVG等。
+					</p>
+					基础技能
+					<span style="display: block;color: #007AFF;margin: 6px;">HTML、CSS、JavaScript</span>
+					<p>
+						这三个是前端开发中最基本也是最必须的三个技能。前端的开发中，在页面的布局时， HTML将元素进行定义，CSS对展示的元素进行定位，再通过JavaScript实现相应的效果和交互。
+						虽然表面看起来很简单，但这里面需要掌握的东西绝对不会少。
+						在进行开发前，需要对这些概念弄清楚、弄明白，这样在开发的过程中才会得心应手。
+					</p>
+					HTML
+					<p>
+						指的是超文本标记语言 (Hyper Text Markup Language)，这个也是我们网页最常用普通的语言了，经历了多个版本的发展，已经发展到5.0版了，得力于W3C建立的标准和规范，已普遍升级到了XHTML，XHTML 指可扩展超文本标签语言（EXtensible HyperText Markup Language），
+						 XHTML 于2000年的1月26日成为 W3C 标准，是更严格更纯净的 HTML 代码，XHTML 的目标是取代 HTML。
+						XHTML 与 HTML 4.01 几乎是相同的，XHTML 是作为一种 XML 应用被重新定义的 HTML，是一个 W3C 标准。W3C 将 XHTML 定义为最新的HTML版本。
+						所有新的浏览器都支持 XHTML。
+					</p>
+					CSS
+					<p>
+						级联样式表（Cascading Style Sheet）简称“CSS”，通常又称为“风格样式表（Style Sheet）”，它是用来进行网页风格设计的。
+						比如，如果想让链接字未点击时是蓝色的，当鼠标移上去后字变成红色的且有下划线，这就是一种风格。
+						通过设立样式表，可以统一地控制HTML中各标志的显示属性。级联样式表可以使人更能有效地控制网页外观。
+						使用级联样式表，可以扩充精确指定网页元素位置，外观以及创建特殊效果的能力。
+					</p>
+					Javascript<h5>（更多详情请进入<a href="JStechnology.html">JS技术区</a>）</h5>
+					<p>
+						是一种由Netscape的LiveScript发展而来的原型化继承的面向对象的动态类型的区分大小写的客户端脚本语言，主要目的是为了解决服务器端语言，比如Perl，遗留的速度问题，为客户提供更流畅的浏览效果。
+						当时服务端需要对数据进行验证，由于网络速度相当缓慢，只有28.8kbps，验证步骤浪费的时间太多。
+						于是Netscape的浏览器Navigator加入了Javascript，提供了数据验证的基本功能。
+					</p>
+				</div>
+				
+				<h3 style="margin-top: 20px; padding-top: 10px;border-top: 1px #666666 solid;">web前端居中技巧</h3>
+				<ul>
+					<li class="skill">
+						<h4>1、 把margin设为auto</h4>
+						<p>
+							具体来说就是把要居中的元素的margin-left和margin-right都设为auto，此方法只能进行水平的居中，且对浮动元素或绝对定位元素无效。
+						</p>
+					</li>
+					<li class="skill">
+						<h4>2、使用 text-align:center</h4>
+						<p>
+							只能对图片，按钮，文字等行内元素(display为inline或inline-block等)进行水平居中。
+							但要说明的是在IE6、7这两个奇葩的浏览器中，它是能对任何元素进行水平居中的。
+						</p>
+					</li>
+					<li class="skill">
+						<h4>3、使用line-height让单行的文字垂直居中</h4>
+						<p>
+							把文字的line-height设为文字父容器的高度，适用于只有一行文字的情况。
+						</p>
+					</li>
+					<li class="skill">
+						<h4>4、使用表格</h4>
+						<p>
+							如 果你使用的是表格的话，那完全不用为各种居中问题而烦恼了，只要用到 td(也可能会用到 th)元素的 align="center" 以及 valign="middle" 这两个属性就可以完美的处理它里面内容的水平和垂直居中问题了,而且表格默认的就会对它里面的内容进行垂直居中。
+							如果想在css中控制表格内容的居中，垂 直居中可以使用 vertical-align:middle，至于水平居中，貌似css中是没有相对应的属性的,但是在IE6、7中我们可以使用text- align:center来对表格里的元素进行水平居中，IE8+以及谷歌、火狐等浏览器的text-align:center只对行内元素起作用，对块 状元素无效。
+						</p>
+						<img src="../../img/main/toBeCenter0.png" alt="" />
+						<p>在ie6、7中可以通过css的text-algin来控制表格内容的水平方向的对齐，无论内容是行内元素还是块状元素都有效。</p>
+						<p>但在ie8+以及chrome、firefox等浏览器中的text-align:center对块状元素无效，只能用表格自有的align属性。</p>
+					</li>
+					<li class="skill">
+						<h4>5、使用display:table-cell来居中</h4>
+						<p>
+							对于那些不是表格的元素，我们可以通过display:table-cell 来把它模拟成一个表格单元格，这样就可以利用表格那很方便的居中特性了。例如：
+						</p>
+						<img src="../../img/main/toBeCenter1.png" alt="" />
+						<p>但是，这种方法只能在IE8+、谷歌、火狐等浏览器上使用，IE6、IE7都无效。</p>
+					</li>
+					<li class="skill">
+						<h4>6、使用绝对定位来进行居中</h4>
+						<p>此法只适用于那些我们已经知道它们的宽度或高度的元素。</p>
+						<p>
+							绝 对定位进行居中的原理是通过把这个绝对定位元素的left或top的属性设为50%,这个时候元素并不是居中的，而是比居中的位置向右或向左偏了这个元素 宽度或高度的一半的距离，
+							所以需要使用一个负的margin-left或margin-top的值来把它拉回到居中的位置，这个负的margin值就取元 素宽度或高度的一半。
+						</p>
+						<img src="../../img/main/toBeCenter2.png" />
+						<p>如果只想实现一个方向的居中，则可以只使用left , margin-left 来实现水平居中，使用top , margin-top来实现垂直居中。</p>
+					</li>
+					<li class="skill">
+						<h4>7、另一种使用绝对定位来居中的方法</h4>
+						<p>
+							此法同样只适用于那些我们已经知道它们的宽度或高度的元素，并且遗憾的是它只支持IE9+,谷歌，火狐等符合w3c标准的现代浏览器。<br />
+							下面用一段代码来了解这种方法：
+						</p>
+						<img src="../../img/main/toBeCenter3.png" />
+						<p>这 里如果不定义元素的宽和高的话，那么他的宽就会由left,right的值来决定，高会由top,bottom的值来决定，所以必须要设置元素的高和宽。 同时如果改变left，right , top , bottom的值还能让元素向某个方向偏移。</p>
+					</li>
+					<li class="skill">
+						<h4>8、使用浮动配合相对定位来进行水平居中</h4>
+						<p>此方法也是关于浮动元素怎么水平居中的解决方法，并且我们不需要知道需要居中的元素的宽度。</p>
+						<p>
+							浮 动居中的原理是：把浮动元素相对定位到父元素宽度50%的地方，但这个时候元素还不是居中的，而是比居中的那个位置多出了自身一半的宽度，这时就需要他里 面的子元素再用一个相对定位，
+							把那多出的自身一半的宽度拉回来，而因为相对定位正是相对于自身来定位的，所以自身一半的宽度只要把left 或 right 设为50%就可以得到了，因而不用知道自身的实际宽度是多少。
+						</p>
+						<p>
+							这种使用浮动配合相对定位来居中的方法，优点是不用知道要居中的元素的宽度，即使这个宽度是不断变化的也行；缺点是需要一个多余的元素来包裹要居中的元素。<br />
+							看以下代码：
+						</p>
+						<img src="../../img/main/toBeCenter4.png" alt="" />
+					</li>
+					<li class="skill">
+						<h4>9、利用font-size来实现垂直居中</h4>
+						<p>如果父元素高度是已知的，要把它里面的子元素进行水平垂直居中，则可以使用这种方法，且子元素的宽度或高度都不必知道。</p>
+						<p>该方法只对IE6和IE7有效。</p>
+						<p>该方法的要点是给父元素设一个合适的font-size的值，这个值的取值为该父元素的高度除以1.14得到的值，并且子元素必须 是一个inline或inline-block元素，需要加上vertical-align:middle属性。</p>
+						<p>至于为什么是除以1.14而不是其他的数，还真没有人知道，你只需要记住1.14这个数就行了。</p>
+						<img src="../../img/main/toBeCenter5.png" alt="" />
+						<p>在方法5中说过在IE8+、火狐谷歌等现在浏览器中可以用display:table-cell来进行居中，而这里的font-size的方法则适用于IE6和IE7，所以把这两种方法结合起来就能兼容所有浏览器了：</p>
+						<img src="../../img/main/toBeCenter6.png" alt="" />
+						<p>上面的例子中因为要居中的元素是一个块状元素，所以我们还需要把他变成行内元素，如果要居中的元素是图片等行内元素，则可以省略此步。</p>
+						<P>另外，如果 vertical-align:middle 是写在父元素中而不是子元素中，这样也是可以的，只不过计算font-size时使用的  1.14 这个 数值要变成大约 1.5 这个值。</p>
+					</li>
+				</ul>
+				<h3 style="margin-top: 20px;">附言<h4 style="color: #727272;margin-bottom: 10px;">各种WEB知识</h4></h3>
+				1.<a href="https://www.zhihu.com/question/43687153">前端界有哪些越早知道越好的小技巧小知识？</a><br />
+				2.<a href="http://www.jb51.net/web/114976.html">web前端技巧整理(个人实战经验)</a><br />
+				3.<a href="http://www.cnblogs.com/lhb25/archive/2013/02/19/modern-css3-techniques-to-embellish-your-website.html">前端笔记：帮助你美化网站的10+实用 CSS3 技巧</a><br />
+				<span style="display: block;margin-bottom: 20px;">》》欲获得更多内容，请自行<a href="https://www.baidu.com/s?wd=%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86" style="margin: 0 6px;">百度一下</a>。</span>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			mui.plusReady(function() {
+				initImgPreview();
+			});
+			var slider = mui("#slider");
+			slider.slider({
+				interval: 3000
+			});
+			var recentHref="";
+			mui.back = function() {
+				var recentView=plus.webview.getWebviewById(recentHref);
+				if(recentView){
+					recentView.close('slide-out-right');
+				}
+				else{
+					plus.webview.close(plus.webview.currentWebview(),'slide-out-right');
+					plus.webview.show(plus.webview.getWebviewById('html/main/main.html'));
+				}
+					
+			};
+			mui('.mainContent').on('tap', 'a', function() {
+				recentHref = this.getAttribute('href');
+				plus.webview.open(recentHref,recentHref,{top:'41px',bottom:'0px'}).show();
+			});
+			document.getElementsByTagName("img")[0].addEventListener('tap', function(e) {
+				e.stopPropagation();
+			});
+			function initImgPreview() {
+				var imgs = document.querySelectorAll("img");
+				imgs = mui.slice.call(imgs);
+				if (imgs && imgs.length > 0) {
+					var slider = document.createElement("div");
+					slider.setAttribute("id", "__mui-imageview__");
+					slider.classList.add("mui-slider");
+					slider.classList.add("mui-fullscreen");
+					slider.classList.add("fullscreenBGcolor");
+					slider.style.display = "none";
+					slider.addEventListener("tap", function() {
+						slider.style.display = "none";
+					});
+					slider.addEventListener("touchmove", function(event) {
+						event.preventDefault();
+					})
+					var slider_group = document.createElement("div");
+					slider_group.setAttribute("id", "__mui-imageview__group");
+					slider_group.classList.add("mui-slider-group");
+					imgs.forEach(function(value, index, array) {
+						//给图片添加点击事件，触发预览显示；
+						value.addEventListener('tap', function() {
+							slider.style.display = "block";
+							_slider.refresh();
+							_slider.gotoItem(index, 0);
+						})
+						var item = document.createElement("div");
+						item.classList.add("mui-slider-item");
+						var a = document.createElement("a");
+						var img = document.createElement("img");
+						img.setAttribute("src", value.src);
+						a.appendChild(img)
+						item.appendChild(a);
+						slider_group.appendChild(item);
+					});
+					slider.appendChild(slider_group);
+					document.body.appendChild(slider);
+					var _slider = mui(slider).slider();
+				}
+			};
+		</script>
+	</body>
+</html>

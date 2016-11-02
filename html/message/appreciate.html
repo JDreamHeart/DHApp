@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>梦心App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<style type="text/css">
+			.mui-content a{
+				color: #333333;
+			}
+			.mui-content a:visited{
+				color: #6641E2;
+			}
+			.mui-content a:active{
+				color: #6641E2;
+			}
+			.mui-table-view{
+				background-color: inherit;
+			}
+			img.mui-media-object{
+				min-width: 70px;
+				min-height: 50px;
+				max-width: 70px;
+				max-height: 50px;
+				border-radius: 3px;
+			}
+			.mui-table-view-cell{
+				margin-bottom: 12px;
+				background-color: #FFFFFF;
+			}
+			.mui-table-view-cell>a{
+				border-bottom: 1px #CCCCCC solid;
+			}
+			.mui-table-view-cell div.mui-clearfix{
+				padding-bottom: 10px;
+				margin-bottom: 20px;
+			}
+			.mui-table-view-cell div.mui-clearfix:first-of-type{
+				border-bottom: 1px #E0E0E0 solid;
+			}
+			.mui-table-view-cell div.mui-clearfix:last-of-type{
+				margin-bottom: 0;
+			}
+			.mui-clearfix>span.mui-pull-left{
+				margin-left: 10px;
+				margin-top: 6px;
+			}
+			.mui-clearfix>span.mui-pull-right{
+				font-size: 15px;
+				margin-top: 8px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left"><span class="mui-icon mui-icon-left-nav"></span>返回</a>
+			<span class="mui-title">赞</span>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<div class="mui-clearfix" style="color: #989898;">
+							<img class="mui-pull-left" src="../../img/eg/F5.jpg" alt="" style="width: 32px;height: 32px;border-radius: 16px;" />
+							<span class="mui-pull-left">小X</span>
+							<span class="mui-pull-right">2016-10-25</span>
+						</div>
+						<div class="mui-clearfix">
+							<img class="mui-media-object mui-pull-left" src="../../img/eg/F6.jpg">
+							<div class="mui-media-body">
+								欣赏1
+								<p class='mui-ellipsis'>欣赏世间的美好，感受生活的乐趣。</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<div class="mui-clearfix" style="color: #989898;">
+							<img class="mui-pull-left" src="../../img/eg/F3.jpg" alt="" style="width: 32px;height: 32px;border-radius: 16px;" />
+							<span class="mui-pull-left">name</span>
+							<span class="mui-pull-right">2016-10-25</span>
+						</div>
+						<div class="mui-clearfix">
+							<img class="mui-media-object mui-pull-left" src="../../img/eg/F7.jpg">
+							<div class="mui-media-body">
+								欣赏2
+								<p class='mui-ellipsis'>欣赏世间的美好，感受生活的乐趣。</p>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			//mui初始化
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			mui.back = function() {
+					plus.webview.hide(plus.webview.currentWebview(),'slide-out-right');
+					plus.webview.show(plus.webview.getWebviewById('html/message/message.html'));
+			};
+		</script>
+	</body>
+</html>

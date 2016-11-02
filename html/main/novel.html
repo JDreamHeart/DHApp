@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>梦心App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/icons-extra.css" />
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			ul,li{
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			.mui-bar .mui-pull-left .mui-icon {
+				padding-right: 5px;
+				font-size: 28px;
+			}
+			.mui-bar .mui-btn {
+				font-weight: normal;
+				font-size: 17px;
+			}
+			
+			.mui-bar .mui-btn-link {
+				top: 1px;
+			}
+			.mui-content>img{
+				width: 100%;
+				height: 210px;
+			}
+			.mui-content>.mui-left{
+				margin-top: 20px;
+				margin-left: 10px;
+			}
+			.mui-slider-group{
+				margin-bottom: 10px;
+			}
+			.mui-slider-indicator {
+				bottom: 0;
+			}
+			.mui-slider {
+				background-color: #f2f2f2;
+			}
+			.mui-table-view-cell>a{
+				padding: 0;
+				background-color: #000;
+			}
+			.mui-table-view-cell>a>img{
+				width: 100%;
+				height: 60px;
+				padding: 0;
+				background-color: #000;
+			}
+			.mui-table-view-cell>a>p:first-of-type{
+				font-size: 12px;
+				margin-top: -6px;
+			}
+			.mui-table-view-cell>a>p:last-of-type{
+				height: 24px;
+				color: #FFFFFF;
+				padding-top: 2px;
+				background-color: #FF0000;
+				margin-bottom: -10px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<header id="header" class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left"><span class="mui-icon mui-icon-left-nav"></span>返回</a>
+			<h1 class="mui-title">小说推荐</h1>
+		</header>
+
+		<div class="mui-content">
+			<h4 class="mui-left">作者推荐榜</h4>
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group">
+					<div class="mui-slider-item">
+						<ul class="mui-table-view mui-grid-view mui-grid-9">
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F1.jpg" alt="" />
+									<p>科幻类</p>
+									<p style="font-size: 12px;">艾萨克·阿西莫夫</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F2.jpg" alt="" />
+									<p>悬疑类</p>
+									<p>宁航一</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F3.jpg" alt="" />
+									<p>悬疑类</p>
+									<p>蔡骏</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F4.jpg" alt="" />
+									<p>科幻类</p>
+									<p>刘慈欣</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F5.jpg" alt="" />
+									<p>科幻类</p>
+									<p>星新一</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F6.jpg" alt="" />
+									<p>科幻类</p>
+									<p>倪匡</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F7.jpg" alt="" />
+									<p>悬疑类</p>
+									<p style="font-size: 12px;">阿加莎·克里斯蒂</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F8.jpg" alt="" />
+									<p>悬疑类</p>
+									<p>东野圭吾</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F9.jpg" alt="" />
+									<p>悬疑类</p>
+									<p style="font-size: 12px;">阿瑟·柯南·道尔</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="mui-slider-item">
+						<ul class="mui-table-view mui-grid-view mui-grid-9">
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F9.jpg" alt="" />
+									<p>悬疑类</p>
+									<p>南派三叔</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F5.jpg" alt="" />
+									<p>科幻类</p>
+									<p>儒勒·凡尔纳</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F2.jpg" alt="" />
+									<p>悬疑类</p>
+									<p>丹·布朗</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F7.jpg" alt="" />
+									<p>短篇小说类</p>
+									<p>欧·亨利</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F1.jpg" alt="" />
+									<p>科幻类</p>
+									<p>阿瑟·克拉克</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F4.jpg" alt="" />
+									<p>科幻类</p>
+									<p style="font-size: 12px;">罗伯特·海因莱茵</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F3.jpg" alt="" />
+									<p>悬疑言情类</p>
+									<p>丁墨</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F6.jpg" alt="" />
+									<p>言情类</p>
+									<p>席绢</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F8.jpg" alt="" />
+									<p>玄幻类</p>
+									<p>唐家三少</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+			
+			<h4 class="mui-left">小说推荐榜</h4>
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group">
+					<div class="mui-slider-item">
+						<ul class="mui-table-view mui-grid-view mui-grid-9">
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F1.jpg" alt="" />
+									<p>艾萨克·阿西莫夫</p>
+									<p>基地三部曲</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F2.jpg" alt="" />
+									<p>艾萨克·阿西莫夫</p>
+									<p>我，机器人</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F3.jpg" alt="" />
+									<p>宁航一</p>
+									<p>十四分之一</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F4.jpg" alt="" />
+									<p>蔡骏</p>
+									<p>天机</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F5.jpg" alt="" />
+									<p>刘慈欣</p>
+									<p>三体</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F6.jpg" alt="" />
+									<p>倪匡</p>
+									<p>卫斯理</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F7.jpg" alt="" />
+									<p>阿加莎·克里斯蒂</p>
+									<p style="font-size: 12px;">东方快车谋杀案</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F9.jpg" alt="" />
+									<p>阿瑟·柯南·道尔</p>
+									<p>福尔摩斯</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F8.jpg" alt="" />
+									<p>东野圭吾</p>
+									<p>白夜行</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="mui-slider-item">
+						<ul class="mui-table-view mui-grid-view mui-grid-9">
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F9.jpg" alt="" />
+									<p>南派三叔</p>
+									<p>盗墓笔记</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F5.jpg" alt="" />
+									<p>儒勒·凡尔纳</p>
+									<p>海底两万里</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F2.jpg" alt="" />
+									<p>丹·布朗</p>
+									<p>达芬奇密码</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F7.jpg" alt="" />
+									<p>何马</p>
+									<p>藏地密码</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F1.jpg" alt="" />
+									<p>阿瑟·克拉克</p>
+									<p>2001太空漫游</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F4.jpg" alt="" />
+									<p>天下霸唱</p>
+									<p>鬼吹灯</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F8.jpg" alt="" />
+									<p>唐家三少</p>
+									<p>斗罗大陆</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F3.jpg" alt="" />
+									<p>丁墨</p>
+									<p style="font-size: 12px;">如果蜗牛有爱情</p>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img src="../../img/eg/F6.jpg" alt="" />
+									<p>丁墨</p>
+									<p>美人为馅</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+			
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				swipeBack: false //启用右滑关闭功能
+			});
+			var recentHref="";
+			mui.back = function() {
+				var recentView=plus.webview.getWebviewById(recentHref);
+				if(recentView){
+					recentView.close('slide-out-right');
+				}
+				else{
+					plus.webview.close(plus.webview.currentWebview(),'slide-out-right');
+					plus.webview.show(plus.webview.getWebviewById('html/main/main.html'));
+				}
+			};
+			mui.ready(function() {
+				/*mui("#slider").slider({
+					interval: 3000
+				});*/
+				var slider = document.getElementById('slider');
+				var group = slider.querySelector('.mui-slider-group');
+				var items = mui('.mui-slider-item', group);
+				//克隆第一个节点
+				var first = items[0].cloneNode(true);
+				first.classList.add('mui-slider-item-duplicate');
+				//克隆最后一个节点
+				var last = items[items.length - 1].cloneNode(true);
+				last.classList.add('mui-slider-item-duplicate');
+				//处理是否循环逻辑，若支持循环，需支持两点：
+				//1、在.mui-slider-group节点上增加.mui-slider-loop类
+				//2、重复增加2个循环节点，图片顺序变为：N、1、2...N、1
+				var sliderApi = mui(slider).slider();
+				toggleLoop();
+				function toggleLoop() {
+					group.classList.add('mui-slider-loop');
+					group.insertBefore(last, group.firstChild);
+					group.appendChild(first);
+					sliderApi.refresh();
+					sliderApi.gotoItem(0);
+				}
+			});
+			/*mui('#webSite').on('tap', 'a', function() {
+				recentHref = this.getAttribute('href');
+				plus.webview.open(recentHref,recentHref,{top:'41px',bottom:'0px'}).show();
+			});*/
+		</script>
+	</body>
+</html>

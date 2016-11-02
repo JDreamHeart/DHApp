@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>梦心App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/icons-extra.css" />
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			ul,li{
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			.mui-bar .mui-pull-left .mui-icon {
+				padding-right: 5px;
+				font-size: 28px;
+			}
+			.mui-bar .mui-btn {
+				font-weight: normal;
+				font-size: 17px;
+			}
+			
+			.mui-bar .mui-btn-link {
+				top: 1px;
+			}
+			.mui-content>img{
+				width: 100%;
+				height: 210px;
+			}
+			.mui-control-content .mui-loading {
+				position: absolute;
+				top: 50px;
+				left: 50%;
+				margin-left: -10px;
+			}
+			.mui-control-content>.mui-center{
+				text-align: center;
+			}
+			.mui-control-content>.mui-center{
+				text-align: center;
+			}
+			.mui-control-content>p.mui-center:first-of-type{
+				margin-top: 10px;
+			}
+			.mui-control-content>p.mui-center:first-of-type>.gameCount{
+				color: #00BBFF;
+				margin: 0 4px;
+			}
+			.mui-card-header img{
+				width: 36px;
+				height: 36px;
+				max-width: 36px;
+				max-height: 36px;
+				border-radius: 18px;
+			}
+			.mui-card-header>.mui-pull-right{
+				margin-top: 10px;
+			}
+			.mui-media-body>h4{
+				margin-top: 10px;
+			}
+			.mui-icon-extra{
+				font-size: 16px;
+			}
+			.mui-card-content>img{
+				width: 100%;
+				max-height: 200px;
+			}
+			#toTop{
+				position: fixed;
+				right: 2px;
+				bottom: 16%;
+				z-index: 2;
+				padding: 8px 8px 6px 8px;
+				background-color: #D9D9D9;
+				border-radius: 24px;
+				opacity: 0.8;
+			}
+			#toTop>.mui-icon-extra{
+				font-size: 18px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header id="header" class="mui-bar mui-bar-transparent">
+			<a class="mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left"><span class="mui-icon mui-icon-left-nav"></span>返回</a>
+			<h1 class="mui-title">Web游戏</h1>
+		</header>
+		<div id="toTop"><span class="mui-icon-extra mui-icon-extra-top"></span></div>
+		<div class="mui-content">
+			<img src="../../img/eg/F5.jpg">
+			<div id="slider" class="mui-slider">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item mui-active" href="#quizGame">益智类</a>
+					<a class="mui-control-item" href="#actionGame">动作类</a>
+				</div>
+				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-6"></div>
+				<div class="mui-slider-group">
+					<div id="quizGame" class="mui-slider-item mui-control-content mui-active">
+						<p class="mui-center">目前已有<span class="gameCount">3</span>款该类游戏</p>
+						<ul>
+							<li class="mui-card">
+								<div class="mui-card-header mui-card-media">
+									<img class="mui-pull-left" src="../../img/eg/F2.jpg"/>
+									<p class="mui-pull-right">更新于 2016-10-31 23:44</p>
+									<div class="mui-media-body">
+										<h4>心算游戏</h4>
+									</div>
+								</div>
+								<div class="mui-card-content" >
+									<img src="../../img/eg/F8.jpg" alt="" width="100%"/>
+								</div>
+								<div class="mui-card-footer">
+									<a class="mui-card-link mui-pull-left"><span class="mui-icon-extra mui-icon-extra-like"></span>赞<span class="mui-badge" style="color: #0060DD;">0</span></a>
+									<a class="mui-card-link"><span class="mui-icon-extra mui-icon-extra-comment"></span>评论<span class="mui-badge" style="color: #0060DD;">0</span></a>
+									<a class="mui-card-link">点击进入<span class="mui-icon-extra mui-icon-extra-arrowrightcricle"></span></a>
+								</div>
+							</li>
+							<li class="mui-card">
+								<div class="mui-card-header mui-card-media">
+									<img class="mui-pull-left" src="../../img/eg/F3.jpg"/>
+									<p class="mui-pull-right">更新于 2016-11-01 00:07</p>
+									<div class="mui-media-body">
+										<h4>找茬游戏</h4>
+									</div>
+								</div>
+								<div class="mui-card-content" >
+									<img src="../../img/eg/F9.jpg" alt="" width="100%"/>
+								</div>
+								<div class="mui-card-footer">
+									<a class="mui-card-link mui-pull-left"><span class="mui-icon-extra mui-icon-extra-like"></span>赞<span class="mui-badge" style="color: #0060DD;">0</span></a>
+									<a class="mui-card-link"><span class="mui-icon-extra mui-icon-extra-comment"></span>评论<span class="mui-badge" style="color: #0060DD;">0</span></a>
+									<a class="mui-card-link">点击进入<span class="mui-icon-extra mui-icon-extra-arrowrightcricle"></span></a>
+								</div>
+							</li>
+							<li class="mui-card">
+								<div class="mui-card-header mui-card-media">
+										<img class="mui-pull-left" src="../../img/eg/F4.jpg"/>
+									<p class="mui-pull-right">更新于 2016-11-01 00:11</p>
+									<div class="mui-media-body">
+										<h4>华容道游戏</h4>
+									</div>
+								</div>
+								<div class="mui-card-content" >
+									<img src="../../img/eg/F10.jpg" alt="" width="100%"/>
+								</div>
+								<div class="mui-card-footer">
+									<a class="mui-card-link mui-pull-left"><span class="mui-icon-extra mui-icon-extra-like"></span>赞<span class="mui-badge" style="color: #0060DD;">0</span></a>
+									<a class="mui-card-link"><span class="mui-icon-extra mui-icon-extra-comment"></span>评论<span class="mui-badge" style="color: #0060DD;">0</span></a>
+									<a class="mui-card-link">点击进入<span class="mui-icon-extra mui-icon-extra-arrowrightcricle"></span></a>
+								</div>
+							</li>
+						</ul>
+						<p class="mui-center">已到最底部</p>
+					</div>
+					<div id="actionGame" class="mui-slider-item mui-control-content">
+						<p class="mui-center mui-hidden">目前已有<span class="gameCount">1</span>款该类游戏</p>
+						<ul>
+							<div class="mui-loading">
+								<div class="mui-spinner">
+								</div>
+							</div>
+						</ul>
+						<p class="mui-center mui-hidden">已到最底部</p>
+					</div>
+				</div>
+			</div>
+				
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jQuery.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				swipeBack: false //启用右滑关闭功能
+			});
+			var recentHref="";
+			mui.back = function() {
+				var recentView=plus.webview.getWebviewById(recentHref);
+				if(recentView){
+					recentView.close('slide-out-right');
+				}
+				else{
+					plus.webview.close(plus.webview.currentWebview(),'slide-out-right');
+					plus.webview.show(plus.webview.getWebviewById('html/main/main.html'));
+				}
+			};
+			document.getElementById('toTop').addEventListener('tap', function(e) {
+				if(mui.os.ios){
+					mui('#pullrefresh').pullRefresh().scrollTo(0,0);
+				}
+				else{
+					$('body,html').animate({scrollTop:0},360);;
+				}
+			});
+			(function($) {
+				var html = '<li class="mui-card"><div class="mui-card-header mui-card-media"><img class="mui-pull-left" src="../../img/eg/F1.jpg"/><p class="mui-pull-right">更新于 2016-10-31 23:44</p><div class="mui-media-body"><h4>ManDown100</h4></div></div><div class="mui-card-content" ><img src="../../img/eg/F7.jpg" alt="" width="100%"/></div><div class="mui-card-footer"><a class="mui-card-link mui-pull-left"><span class="mui-icon-extra mui-icon-extra-like"></span>赞<span class="mui-badge" style="color: #0060DD;">0</span></a><a class="mui-card-link"><span class="mui-icon-extra mui-icon-extra-comment"></span>评论<span class="mui-badge" style="color: #0060DD;">0</span></a><a class="mui-card-link">点击进入<span class="mui-icon-extra mui-icon-extra-arrowrightcricle"></span></a></div></li>';
+				var item = document.getElementById('actionGame');
+				document.getElementById('slider').addEventListener('slide', function(e) {
+					if (item.querySelector('.mui-loading')) {
+						setTimeout(function() {
+							var itemP=item.getElementsByTagName('p');
+							itemP[0].classList.remove('mui-hidden');
+							itemP[1].classList.remove('mui-hidden');
+							item.querySelector('ul').innerHTML = html;
+						}, 500);
+					}
+				});
+			})(mui);
+			/*mui('#webSite').on('tap', 'a', function() {
+				recentHref = this.getAttribute('href');
+				plus.webview.open(recentHref,recentHref,{top:'41px',bottom:'0px'}).show();
+			});*/
+		</script>
+	</body>
+</html>

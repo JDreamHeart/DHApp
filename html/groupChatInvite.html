@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>梦心App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<style type="text/css">
+			.mui-content{
+				margin-top: 10px;
+			}
+			.newFriendTitle{
+				font-size: 14px;
+				color: #686868;
+				margin-left: 10px;
+			}
+			.mui-table-view{
+				background-color: #FFFFFF;
+			}
+			img.mui-media-object{
+				min-width: 48px;
+				min-height: 48px;
+				max-width: 48px;
+				max-height: 48px;
+			}
+			.mui-table-view-cell>a{
+				position: relative;
+				border-bottom: 1px #EEEEEE solid;
+			}
+			.mui-media-body{
+				margin-top: 4px;
+			}
+			.mui-media-body>p{
+				margin-top: 2px;
+			}
+			.mui-media-body>.mui-pull-right{
+				font-size: 16px;
+				color: #989898;
+				margin-top: 10px;
+			}
+			.mui-media-body>.mui-btn{
+				color: #FFFFFF;
+				margin-top: 2px;
+				background-color: #009900;
+			}
+			.mui-content>.mui-center{
+				color: #868686;
+				margin-top: 10px;
+			}
+			.mui-content>.mui-center>span{
+				color: #007AFF;
+				padding: 0 4px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left"><span class="mui-icon mui-icon-left-nav"></span>返回</a>
+			<span class="mui-title">群聊邀请</span>
+		</header>
+		<div class="mui-content">
+			<div class="newFriendTitle">新的邀请</div>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<div class="mui-clearfix">
+							<img class="mui-media-object mui-pull-left" src="../img/eg/F2.jpg">
+							<div class="mui-media-body">
+								<span class="mui-pull-right">已加入</span>
+								华师交流群
+								<p>对方邀请你加入该群</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<div class="mui-clearfix">
+							<img class="mui-media-object mui-pull-left" src="../img/eg/F7.jpg">
+							<div class="mui-media-body">
+								<span class="mui-pull-right">已加入</span>
+								进击的光电
+								<p>对方邀请你加入该群</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<div class="mui-clearfix">
+							<img class="mui-media-object mui-pull-left" src="../img/eg/F5.jpg">
+							<div class="mui-media-body">
+								<span class="mui-pull-right">已加入</span>
+								猴赛雷
+								<p>对方邀请你加入该群</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<div class="mui-clearfix">
+							<img class="mui-media-object mui-pull-left" src="../img/eg/F4.jpg">
+							<div class="mui-media-body">
+								<span class="mui-btn mui-pull-right">接受</span>
+								前端交流群
+								<p>对方邀请你加入该群</p>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="mui-center mui-title">
+				已接受<span id="groupsNum">3</span>个群聊邀请
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			//mui初始化
+			mui.init();
+		</script>
+	</body>
+</html>

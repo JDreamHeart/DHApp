@@ -1,0 +1,141 @@
+/*index页面中的样式*/
+.RedPoint{
+	color: #EE0000;
+	font-size: 60px;
+	position: relative;
+	top: 3px;
+	right: 28px;
+}
+.iconRedPoint{
+	color: #EE0000;
+	font-size: 60px;
+	position: absolute;
+	top: -10px;
+}
+.mui-icon-pengyouquan>.iconRedPoint{
+	top: -21px;
+}
+.white{
+	color: #FFFFFF;
+}
+.indexHeader{
+	height: 100%;
+	background-color: #000;
+}
+.mui-popover {
+	height: 300px;
+}
+/*user_me页面中的样式*/
+.userMe{
+	margin-top: 20px;
+}
+.userMe>div,.userMe>ul{
+	margin-top: 20px;
+}
+.userMe>div:last-child{
+	margin-bottom: 20px;
+}
+.userHead{
+	height: 76px;
+}
+.userHeadPic{
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	margin-top: -3px;
+}
+.userHeadInfo{
+	display: inline-block;
+	position: relative;
+	top: -10px;
+	left: 10px;
+}
+.userHeadInfo>p{
+	margin: 3px;
+}
+.userHeadName{
+	font-size: 17px;
+	color: #333333;
+}
+.userHeadName>.mui-icon{
+	display: inline-block;
+	color: #007AFF;
+	font-size: 20px;
+	margin-left: 6px;
+}
+.bgTitle{
+	text-align: center;
+	background-color: #F0F0F0;
+}
+.fullscreenBGcolor{
+	position: fixed;
+	z-index: 20;
+	background-color: #363636;
+}
+/*message页面中的样式*/
+.messageHead{
+	padding: 8px 0;
+}
+.friendMessage img{
+	min-width: 50px;
+	min-height: 50px;
+	max-width: 50px;
+	max-height: 50px;
+	border-radius: 25px;
+}
+.friendMessageSpan{
+	position: relative;
+	left: 20px;
+	top: -20px;
+}
+.friendMessageSpan>strong{
+	display: inline-block;
+	max-width: 60px;
+	position: relative;
+	top: 6px;
+	margin: auto 4px;
+	color: #0060DD;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.systemMessage .mui-table-view{
+	background-color: #FCFCFC;
+	border-top: 1px #E0E0E0 solid;
+	border-bottom: 1px #E0E0E0 solid;
+}
+.systemMessage .mui-table-view:first-child{
+	margin-top: 30px;
+}
+.systemMessage .mui-table-view-cell>a{
+	height: 66px;
+}
+.sysMessageAIcon{
+	display: inline-block;
+	margin-top: 8px;
+	margin-right: 12px;
+}
+.messageSpanFont{
+	display: inline-block;
+	margin-left: 6px;
+	font-size: 16px;
+}
+/*community页面的样式*/
+.community{
+	margin-top: 20px;
+}
+.community>div,.community>ul{
+	margin-top: 20px;
+}
+/*main页面的样式*/
+.mainSlide img{
+	max-width: 100%;
+	max-height: 150px;
+}
+.main .mui-content>.mui-grid-view{
+	margin-top: -10px;
+	background-color: #FCFCFC;
+}
+.mui-content>ul.mui-table-view{
+	margin-top: 20px;
+}

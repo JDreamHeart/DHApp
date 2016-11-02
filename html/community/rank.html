@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>梦心App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/user.css" />
+		<style type="text/css">
+			ul{
+				list-style: none;
+				padding: 0;
+			}
+			#headImg{
+				width: 90px;
+				height: 90px;
+				border: 4px #DEDEDE solid;
+				border-radius: 45px;
+			}
+			#rankDefault .mui-page-content{
+				margin-top: -14px;
+			}
+			.mui-page{
+				margin-top: -2px;
+			}
+			.rankHead{
+				color: #FFFFFF;
+				background-color: #333333;
+			}
+			.rankHead>.mui-table-view-cell.mui-active{
+				background-color: #333333;
+			}
+			.rankHead p{
+				margin-top: 6px;
+				margin-left: 10px;
+				color: #33ECFF;
+			}
+			.rankHead p:first-of-type{
+				font-size: 16px;
+			}
+			.rankHead p>span{
+				color: #EBEB00;
+				margin-left: 20px;
+			}
+			.rankHead p>progress{
+				height: 8px;
+				margin: 0 10px;
+				color: #EC971F;
+				background: #FFFFFF;
+			}
+			.rankHead p>progress::-webkit-progress-bar{
+				background: #FFFFFF;
+			}
+			.rankHead p>progress::-webkit-progress-value{
+				background: #EC971F;
+			}
+			.rankHead strong{
+				color: #FFFF00;
+			}
+			.chart {
+				width: 100%;
+				height: 180px;
+				margin: 0;
+				padding: 0;
+			}
+			.rankUl{
+				margin-left: 10px;
+				margin-right: 14px;
+			}
+			.rankUl>li{
+				margin-top: 16px;
+			}
+			.rankProcess{
+				height: 10px;
+				margin-top: 4px;
+				border-radius: 4px;
+			}
+			.rankBody a.mui-navigate-right{
+				padding-top: 22px;
+				height: 60px;
+			}
+			li.mui-table-view a{
+				padding: 0 10px;
+			}
+			li.mui-table-view .mui-clearfix:first-of-type{
+				color: #333333;
+				margin-bottom: 10px;
+				border-bottom: 1px #E1E1E1 solid;
+			}
+			li.mui-table-view .mui-clearfix:first-of-type>.mui-pull-right{
+				font-size: 14px;
+				color: #989898;
+			}
+			li.mui-table-view:nth-of-type(1) .mui-clearfix,
+			li.mui-table-view:nth-of-type(2) .mui-clearfix,
+			li.mui-table-view:nth-of-type(3) .mui-clearfix{
+				color: #FF3300;
+			}
+			.mui-media-body{
+				color: #007AFF;
+			}
+		</style>
+	</head>
+	<body class="mui-fullscreen">
+		<div id="rank" class="mui-views">
+			<div class="mui-view">
+				<div class="mui-navbar"></div>
+				<div class="mui-pages"></div>
+			</div>
+		</div>
+		<div id="rankDefault" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<a class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>返回
+				</a>
+				<h1 class="mui-center mui-title">排行榜</h1>
+			</div>
+			<div class="mui-page-content">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="rankHead mui-table-view">
+							<div class="mui-table-view-cell">
+								<div class="mui-clearfix">
+									<img id="headImg" class="mui-action-preview mui-pull-left" src="" />
+									<div class="mui-pull-left">
+										<p>ID：<strong>梦心DH</strong></p>
+										<p>等级：<strong>1</strong> 级<progress value="0.8"></progress></p>
+										<p>梦币：<strong>0</strong> DH<span>充值</span></p>
+									</div>
+								</div>
+								<div id="userRank" class="chart"></div>
+								<ul class="rankUl">
+									<li style="color: #EC971F;">
+										<span>经验榜</span>
+										<span>100%</span>
+										<div class="rankProcess" style="width: 100%;background-color: #EC971F;"></div>
+									</li>
+									<li style="color: #EBEB00;">
+										<span>财富榜</span>
+										<span>100%</span>
+										<div class="rankProcess" style="width: 100%;background-color: #EBEB00;"></div>
+									</li>
+									<li style="color: #0090EF">
+										<span>JS技术</span>
+										<span>100%</span>
+										<div class="rankProcess" style="width: 100%;background-color: #0090EF;"></div>
+									</li>
+									<li style="color: #ED682D;">
+										<span>前端技巧</span>
+										<span>100%</span>
+										<div class="rankProcess" style="width: 100%;background-color: #ED682D;"></div>
+									</li>
+									<li style="color: #00CBFF;">
+										<span>Web框架</span>
+										<span>100%</span>
+										<div class="rankProcess" style="width: 100%;background-color: #00CBFF;"></div>
+									</li>
+									<li style="color: #FD50BC;">
+										<span>Web游戏</span>
+										<span>100%</span>
+										<div class="rankProcess" style="width: 100%;background-color: #FD50BC;"></div>
+									</li>
+									<li style="color: #4CD964;">
+										<span>小说排行</span>
+										<span>100%</span>
+										<div class="rankProcess" style="width: 100%;background-color: #4CD964;"></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+						<ul class="rankBody mui-table-view mui-table-view-chevron">
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="#experience">
+									经验榜TOP10
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="#wealth">
+									财富榜TOP10
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="#JStech">
+									JS技术TOP10
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="#webTech">
+									前端技巧TOP10
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="#webFrame">
+									Web框架TOP10
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="#webGame">
+									Web游戏TOP10
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="#novel">
+									小说排行TOP10
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="experience" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>返回
+				</button>
+				<h1 class="mui-center mui-title">经验榜</h1>
+			</div>
+			<div class="mui-page-content">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<ul>
+							<li class="mui-table-view">
+								<div class="mui-table-view-cell">
+									<a>
+										<div class="mui-clearfix">
+											<span class="mui-pull-left">No.1</span>
+											<span class="mui-pull-right">经验值100</span>
+										</div>
+										<div class="mui-clearfix">
+											<img class="mui-media-object mui-pull-left" src="../../img/eg/F4.jpg">
+											<div class="mui-media-body">
+												不具名之人
+												<p class='mui-ellipsis-2'>个性签名：关注青春的话题，踏寻心中的梦想，永不低头！</p>
+											</div>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li class="mui-table-view">
+								<div class="mui-table-view-cell">
+									<a>
+										<div class="mui-clearfix">
+											<span class="mui-pull-left">No.2</span>
+											<span class="mui-pull-right">经验值99</span>
+										</div>
+										<div class="mui-clearfix">
+											<img class="mui-media-object mui-pull-left" src="../../img/eg/F4.jpg">
+											<div class="mui-media-body">
+												无名之人
+												<p class='mui-ellipsis-2'>个性签名：关注青春的话题，踏寻心中的梦想，永不低头！</p>
+											</div>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="wealth" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>返回
+				</button>
+				<h1 class="mui-center mui-title">财富榜</h1>
+			</div>
+			<div class="mui-page-content">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<ul>
+							<li class="mui-table-view">
+								<div class="mui-table-view-cell">
+									<a>
+										<div class="mui-clearfix">
+											<span class="mui-pull-left">No.1</span>
+											<span class="mui-pull-right">经验值100</span>
+										</div>
+										<div class="mui-clearfix">
+											<img class="mui-media-object mui-pull-left" src="../../img/eg/F4.jpg">
+											<div class="mui-media-body">
+												不具名之人
+												<p class='mui-ellipsis-2'>个性签名：关注青春的话题，踏寻心中的梦想，永不低头！</p>
+											</div>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li class="mui-table-view">
+								<div class="mui-table-view-cell">
+									<a>
+										<div class="mui-clearfix">
+											<span class="mui-pull-left">No.2</span>
+											<span class="mui-pull-right">经验值99</span>
+										</div>
+										<div class="mui-clearfix">
+											<img class="mui-media-object mui-pull-left" src="../../img/eg/F4.jpg">
+											<div class="mui-media-body">
+												无名之人
+												<p class='mui-ellipsis-2'>个性签名：关注青春的话题，踏寻心中的梦想，永不低头！</p>
+											</div>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="JStech" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>返回
+				</button>
+				<h1 class="mui-center mui-title">JS技术</h1>
+			</div>
+			<div class="mui-page-content">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<ul>
+							<li class="mui-table-view">
+								<div class="mui-table-view-cell">
+									<a>
+										<div class="mui-clearfix">
+											<span class="mui-pull-left">No.1</span>
+											<span class="mui-pull-right">经验值100</span>
+										</div>
+										<div class="mui-clearfix">
+											<img class="mui-media-object mui-pull-left" src="../../img/eg/F4.jpg">
+											<div class="mui-media-body">
+												不具名之人
+												<p class='mui-ellipsis-2'>个性签名：关注青春的话题，踏寻心中的梦想，永不低头！</p>
+											</div>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li class="mui-table-view">
+								<div class="mui-table-view-cell">
+									<a>
+										<div class="mui-clearfix">
+											<span class="mui-pull-left">No.2</span>
+											<span class="mui-pull-right">经验值99</span>
+										</div>
+										<div class="mui-clearfix">
+											<img class="mui-media-object mui-pull-left" src="../../img/eg/F4.jpg">
+											<div class="mui-media-body">
+												无名之人
+												<p class='mui-ellipsis-2'>个性签名：关注青春的话题，踏寻心中的梦想，永不低头！</p>
+											</div>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="webTech" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>返回
+				</button>
+				<h1 class="mui-center mui-title">前端技巧</h1>
+			</div>
+			<div class="mui-page-content">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<ul>
+							<li class="mui-table-view">
+								<div class="mui-table-view-cell">
+									<a>
+										<div class="mui-clearfix">
+											<span class="mui-pull-left">No.1</span>
+											<span class="mui-pull-right">经验值100</span>
+										</div>
+										<div class="mui-clearfix">
+											<img class="mui-media-object mui-pull-left" src="../../img/eg/F4.jpg">
+											<div class="mui-media-body">
+												不具名之人
+												<p class='mui-ellipsis-2'>个性签名：关注青春的话题，踏寻心中的梦想，永不低头！</p>
+											</div>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li class="mui-table-view">
+								<div class="mui-table-view-cell">
+									<a>
+										<div class="mui-clearfix">
+											<span class="mui-pull-left">No.2</span>
+											<span class="mui-pull-right">经验值99</span>
+										</div>
+										<div class="mui-clearfix">
+											<img class="mui-media-object mui-pull-left" src="../../img/eg/F4.jpg">
+											<div class="mui-media-body">
+												无名之人
+												<p class='mui-ellipsis-2'>个性签名：关注青春的话题，踏寻心中的梦想，永不低头！</p>
+											</div>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="webFrame" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>返回
+				</button>
+				<h1 class="mui-center mui-title">Web框架</h1>
+			</div>
+			<div class="mui-page-content">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<ul>
+							<li class="mui-table-view">
+								<div class="mui-table-view-cell">
+									<a>
+										<div class="mui-clearfix">
+											<span class="mui-pull-left">No.1</span>
+											<span class="mui-pull-right">经验值100</span>
+										</div>
+										<div class="mui-clearfix">
+											<img class="mui-media-object mui-pull-left" src="../../img/eg/F4.jpg">
+											<div class="mui-media-body">
+												不具名之人
+												<p class='mui-ellipsis-2'>个性签名：关注青春的话题，踏寻心中的梦想，永不低头！</p>
+											</div>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li class="mui-table-view">
+								<div class="mui-table-view-cell">
+									<a>
+										<div class="mui-clearfix">
+											<span class="mui-pull-left">No.2</span>
+											<span class="mui-pull-right">经验值99</span>
+										</div>
+										<div class="mui-clearfix">
+											<img class="mui-media-object mui-pull-left" src="../../img/eg/F4.jpg">
+											<div class="mui-media-body">
+												无名之人
+												<p class='mui-ellipsis-2'>个性签名：关注青春的话题，踏寻心中的梦想，永不低头！</p>
+											</div>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="webGame" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>返回
+				</button>
+				<h1 class="mui-center mui-title">Web游戏</h1>
+			</div>
+			<div class="mui-page-content">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<ul>
+							<li class="mui-table-view">
+								<div class="mui-table-view-cell">
+									<a>
+										<div class="mui-clearfix">
+											<span class="mui-pull-left">No.1</span>
+											<span class="mui-pull-right">经验值100</span>
+										</div>
+										<div class="mui-clearfix">
+											<img class="mui-media-object mui-pull-left" src="../../img/eg/F4.jpg">
+											<div class="mui-media-body">
+												不具名之人
+												<p class='mui-ellipsis-2'>个性签名：关注青春的话题，踏寻心中的梦想，永不低头！</p>
+											</div>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li class="mui-table-view">
+								<div class="mui-table-view-cell">
+									<a>
+										<div class="mui-clearfix">
+											<span class="mui-pull-left">No.2</span>
+											<span class="mui-pull-right">经验值99</span>
+										</div>
+										<div class="mui-clearfix">
+											<img class="mui-media-object mui-pull-left" src="../../img/eg/F4.jpg">
+											<div class="mui-media-body">
+												无名之人
+												<p class='mui-ellipsis-2'>个性签名：关注青春的话题，踏寻心中的梦想，永不低头！</p>
+											</div>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="novel" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>返回
+				</button>
+				<h1 class="mui-center mui-title">小说排行</h1>
+			</div>
+			<div class="mui-page-content">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<ul>
+							<li class="mui-table-view">
+								<div class="mui-table-view-cell">
+									<a>
+										<div class="mui-clearfix">
+											<span class="mui-pull-left">No.1</span>
+											<span class="mui-pull-right">经验值100</span>
+										</div>
+										<div class="mui-clearfix">
+											<img class="mui-media-object mui-pull-left" src="../../img/eg/F4.jpg">
+											<div class="mui-media-body">
+												不具名之人
+												<p class='mui-ellipsis-2'>个性签名：关注青春的话题，踏寻心中的梦想，永不低头！</p>
+											</div>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li class="mui-table-view">
+								<div class="mui-table-view-cell">
+									<a>
+										<div class="mui-clearfix">
+											<span class="mui-pull-left">No.2</span>
+											<span class="mui-pull-right">经验值99</span>
+										</div>
+										<div class="mui-clearfix">
+											<img class="mui-media-object mui-pull-left" src="../../img/eg/F4.jpg">
+											<div class="mui-media-body">
+												无名之人
+												<p class='mui-ellipsis-2'>个性签名：关注青春的话题，踏寻心中的梦想，永不低头！</p>
+											</div>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/mui.view.js "></script>
+		<script src="../../libs/echarts-all.js"></script>
+		<script>
+			var isChangeHeadImg=false;
+			mui.init({
+				swipeBack:false //启用右滑关闭功能
+			});
+			mui.plusReady(function() {
+				defaultImg();
+			});
+			var viewApi = mui('#rank').view({
+				defaultPage: '#rankDefault'
+			});
+			mui('.mui-scroll-wrapper').scroll(); //初始化单页的区域滚动
+			var view = viewApi.view;
+			(function($) {
+				//处理view的后退与webview后退
+				var oldBack = $.back;
+				$.back = function() {
+					if (viewApi.canBack()) { //如果view可以后退，则执行view的后退
+						viewApi.back();
+					} else {
+						if(isChangeHeadImg){
+							plus.webview.getWebviewById("html/user/user_me.html").reload();
+						}
+						plus.webview.hide(plus.webview.currentWebview(),'slide-out-right');
+						plus.webview.show(plus.webview.getWebviewById('html/community/community.html'));
+					}
+				};
+			})(mui);
+			function defaultImg() {
+				if(mui.os.plus){
+					plus.io.resolveLocalFileSystemURL("_doc/head.jpg", function(entry) {
+						var s = entry.fullPath + "?version=" + new Date().getTime();;
+						document.getElementById("headImg").src = s;
+					}, function(e) {
+						document.getElementById("headImg").src = '../../img/user/theimg.jpeg';
+					})
+				}else{
+					document.getElementById("headImg").src = '../../img/user/theimg.jpeg';
+				}
+			};
+			document.getElementById("headImg").addEventListener('tap', function(e) {
+				e.stopPropagation();
+			});
+			
+			var userOption={
+				calculable: true,
+				series: [{
+					name: '访问来源',
+					type: 'pie',
+					data: [{
+						value: 1,
+						name: '前端技巧'
+					}, {
+						value: 1,
+						name: 'Web框架'
+					}, {
+						value: 1,
+						name: 'Web游戏'
+					}, {
+						value: 1,
+						name: '小说排行 '
+					}, {
+						value: 1,
+						name: 'JS技术'
+					}]
+				}]
+			};
+			var pieChart = echarts.init(document.getElementById('userRank'));
+			pieChart.setOption(userOption);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>梦心App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<style>
+			html,
+			body {
+				background-color: #000;
+			}
+			ul,li{
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			.mui-fullscreen {
+				position: fixed;
+				z-index: 20;
+				background-color: #111;
+				opacity: 0.9;
+			}
+			.mui-bar .mui-pull-left .mui-icon {
+				padding-right: 5px;
+				font-size: 28px;
+			}
+			
+			.mui-bar .mui-btn {
+				font-weight: normal;
+				font-size: 17px;
+			}
+			
+			.mui-bar .mui-btn-link {
+				top: 1px;
+			}
+			.mui-content,.mui-table-view{
+				background-color: #000;
+			}
+			.mui-content img{
+				width: 100%;
+				height: 210px;
+			}
+			p{
+				font-size: 16px;
+				text-indent: 2em;
+				color: #727272;
+				margin-bottom: 15px;
+			}
+			.mainContent{
+				color: #FFFFFF;
+			}
+			.mainContent .mui-btn{
+				margin-top: 20px;
+			}
+			.mainContent .mui-table-view-cell.mui-active a{
+				color: #000;
+			}
+			.mainContent img{
+				width: 100%;
+				height: auto;
+			}
+			#webSite>li{
+				display: inline-block;
+				margin: 10px;
+			}
+			#webSite>li a{
+				color: #00BBFF;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<header id="header" class="mui-bar mui-bar-transparent">
+			<a class="mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left"><span class="mui-icon mui-icon-left-nav"></span>返回</a>
+			<h1 class="mui-title">Web框架</h1>
+		</header>
+
+		<div class="mui-content">
+			<div id="slider" class="mui-slider" >
+			  <div class="mui-slider-group mui-slider-loop">
+			    <div class="mui-slider-item mui-slider-item-duplicate">
+			        <img src="../../img/eg/F6.jpg">
+				</div>
+			    <!-- 第一张 -->
+			    <div class="mui-slider-item">
+			      <a href="javascript:;">
+			        <img src="../../img/eg/F3.jpg">
+			      </a>
+			    </div>
+			    <!-- 第二张 -->
+			    <div class="mui-slider-item">
+			      <a href="javascript:;">
+			        <img src="../../img/eg/F6.jpg">
+			      </a>
+			    </div>
+			    <div class="mui-slider-item mui-slider-item-duplicate">
+			        <img src="../../img/eg/F3.jpg">
+				</div>
+			  </div>
+			  <div class="mui-slider-indicator">
+			    <div class="mui-indicator mui-active"></div>
+			    <div class="mui-indicator"></div>
+			  </div>
+			</div>
+			
+			<div class="mainContent">
+				<span class="mui-btn mui-btn-green">框架列表</span>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="javascript:;">jQuery</a>
+						<div class="mui-collapse-content">
+							<p>
+								jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。
+								jQuery设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。
+								它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互。
+							</p>
+							<p>
+								jQuery的核心特性可以总结为：具有独特的链式语法和短小清晰的多功能接口；具有高效灵活的css选择器，并且可对CSS选择器进行扩展；拥有便捷的插件扩展机制和丰富的插件。
+								jQuery兼容各种主流浏览器，如IE 6.0+、FF 1.5+、Safari 2.0+、Opera 9.0+等。
+							</p>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="javascript:;">jQuery Mobile</a>
+						<div class="mui-collapse-content">
+							<p>
+								jQuery Mobile是jQuery 框架的一个组件（而非jquery的移动版本）。
+								jQuery Mobile 不仅会给主流移动平台带来jQuery核心库，而且会发布一个完整统一的jQuery移动UI框架。
+								支持全球主流的移动平台。jQuery Mobile开发团队说：能开发这个项目，我们非常兴奋。
+								移动Web太需要一个跨浏览器的框架，让开发人员开发出真正的移动Web网站。
+							</p>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">AngularJS</a>
+						<div class="mui-collapse-content">
+							<p>
+								AngularJS诞生于2009年，由Misko Hevery 等人创建，后为Google所收购。
+								是一款优秀的前端JS框架，已经被用于Google的多款产品当中。
+								AngularJS有着诸多特性，最为核心的是：MVC、模块化、自动化双向数据绑定、语义化标签、依赖注入等等。
+							</p>
+							<p>
+								AngularJS试图成为WEB应用中的一种客户端的解决方案。
+								这意味着它不只是你的WEB应用中的一个小部分，还是一个完整的客户端的解决方案。
+								这会让AngularJS在构建一个CRUD（增加Create、查询Retrieve、更新Update、删除Delete）的应用时显得很“固执”（原文为 opinionated,意指没有太多的其他方式）。
+								但是，尽管它很“固执”，它仍然能确保它的“固执”只是在你构建应用的起点，并且你仍能灵活变动。
+								AngularJS的一些出众之处如下：
+							</p>
+							<p>构建一个CRUD应用可能用到的全部内容包括：数据绑定、基本模板标识符、表单验证、路由、深度链接、组件重用、依赖注入。</p>
+							<p>测试方面包括：单元测试、端对端测试、模拟和自动化测试框架。</p>
+							<p>具有目录布局和测试脚本的种子应用作为起点。</p>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="javascript:;">Bootstrap</a>
+						<div class="mui-collapse-content">
+							<p>
+								Bootstrap，来自 Twitter，是目前很受欢迎的前端框架。
+								Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷。
+								它由Twitter的设计师Mark Otto和Jacob Thornton合作开发，是一个CSS/HTML框架。
+								Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言Less写成。
+								Bootstrap一经推出后颇受欢迎，一直是GitHub上的热门开源项目，包括NASA的MSNBC（微软全国广播公司）的Breaking News都使用了该项目。
+								国内一些移动开发者较为熟悉的框架，如WeX5前端开源框架等，也是基于Bootstrap源码进行性能优化而来。
+							</p>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="javascript:;">ReactJS</a>
+						<div class="mui-collapse-content">
+							<p>
+								React 起源于 Facebook 的内部项目，因为该公司对市场上所有 JavaScript MVC 框架，都不满意，就决定自己写一套，用来架设 Instagram 的网站。
+								做出来以后，发现这套东西很好用，就在2013年5月开源了。由于 React 的设计思想极其独特，属于革命性创新，性能出众，代码逻辑却非常简单。
+								所以，越来越多的人开始关注和使用，认为它可能是将来 Web 开发的主流工具。
+							</p>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="javascript:;">nodeJS</a>
+						<div class="mui-collapse-content">
+							<p>
+								Node.js是一个Javascript运行环境(runtime)。
+								实际上它是对Google V8引擎进行了封装。V8引 擎执行Javascript的速度非常快，性能非常好。
+								Node.js对一些特殊用例进行了优化，提供了替代的API，使得V8在非浏览器环境下运行得更好。
+							</p>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="javascript:;">MooTools</a>
+						<div class="mui-collapse-content">
+							<p>
+								MooTools是一个简洁，模块化，面向对象的开源JavaScript web应用框架。
+								它为web开发者提供了一个跨浏览器js解决方案,同时还提供了一个比普通js更面向对象的documentAPI。
+							</p>
+							<span style="color: #333;">优点：</span>
+							<p>1.灵活，模块化的框架，用户可以选择自己需要的组件。</p>
+							<p>2.MooTools符合OO的思想，使代码更强壮，有力，有效。</p>
+							<p>3.高效的组件机制,可以和flash进行完美的交互。</p>
+							<p>4.对于DOM的扩展增强，使开发者更好的利用document。</p>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="javascript:;">Dojo</a>
+						<div class="mui-collapse-content">
+							<p>
+								Dojo是一个用javascript语言实现的开源DHTML工具包。它是在几个项目捐助基础上建立起来的(nWidgets,Burstlib,f(m)),这也是为什么叫它a"unified"toolkit的原因。
+								Dojo的目标是解决开发DHTML应用程序遇到的那些，长期存在、历史问题(historical problems with DHTML)、跨浏览器问题。
+							</p>
+							<p>Dojo能够让你更容易使Web页面具有动态能力，或者在任何能够稳定支持JavaScript语言的环境中发挥作用。</p>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="javascript:;">MUI</a>
+						<div class="mui-collapse-content">
+							<span style="color: #333;">轻量</span>
+							<p>追求性能体验，是我们开始启动MUI项目的首要目标，轻量必然是重要特征；</p>
+							<p>MUI不依赖任何第三方JS库，压缩后的JS和CSS文件仅有100+K和60+K。</p>
+							<span style="color: #333;">原生UI</span>
+							<p>鉴于之前的很多前端框架（特别是响应式布局的框架），UI控件看起来太像网页，没有原生感觉，因此追求原生UI感觉也是我们的重要目标。</p>
+							<p>MUI以iOS平台UI为基础，补充部分Android平台特有的UI控件。</p>
+							<img src="../../img/main/muiIcon.png" />
+							<span style="color: #333;">流畅体验</span>
+							<p>......</p>
+						</div>
+					</li>
+				</ul>
+				<span class="mui-btn mui-btn-blue">推荐网站</span>
+				<ul id="webSite">
+					<li><a href="http://www.w3school.com.cn/">W3school</a></li>
+					<li><a href="http://www.runoob.com/">菜鸟教程</a></li>
+				</ul>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			mui.plusReady(function() {
+				initImgPreview();
+			});
+			var slider = mui("#slider");
+			slider.slider({
+				interval: 3000
+			});
+			var recentHref="";
+			mui.back = function() {
+				var recentView=plus.webview.getWebviewById(recentHref);
+				if(recentView){
+					recentView.close('slide-out-right');
+				}
+				else{
+					plus.webview.close(plus.webview.currentWebview(),'slide-out-right');
+					plus.webview.show(plus.webview.getWebviewById('html/main/main.html'));
+				}
+					
+			};
+			mui('#webSite').on('tap', 'a', function() {
+				recentHref = this.getAttribute('href');
+				plus.webview.open(recentHref,recentHref,{top:'41px',bottom:'0px'}).show();
+			});
+			document.getElementsByTagName("img")[0].addEventListener('tap', function(e) {
+				e.stopPropagation();
+			});
+			function initImgPreview() {
+				var imgs = document.querySelectorAll("img");
+				imgs = mui.slice.call(imgs);
+				if (imgs && imgs.length > 0) {
+					var slider = document.createElement("div");
+					slider.setAttribute("id", "__mui-imageview__");
+					slider.classList.add("mui-slider");
+					slider.classList.add("mui-fullscreen");
+					slider.classList.add("fullscreenBGcolor");
+					slider.style.display = "none";
+					slider.addEventListener("tap", function() {
+						slider.style.display = "none";
+					});
+					slider.addEventListener("touchmove", function(event) {
+						event.preventDefault();
+					})
+					var slider_group = document.createElement("div");
+					slider_group.setAttribute("id", "__mui-imageview__group");
+					slider_group.classList.add("mui-slider-group");
+					imgs.forEach(function(value, index, array) {
+						//给图片添加点击事件，触发预览显示；
+						value.addEventListener('tap', function() {
+							slider.style.display = "block";
+							_slider.refresh();
+							_slider.gotoItem(index, 0);
+						})
+						var item = document.createElement("div");
+						item.classList.add("mui-slider-item");
+						var a = document.createElement("a");
+						var img = document.createElement("img");
+						img.setAttribute("src", value.src);
+						a.appendChild(img)
+						item.appendChild(a);
+						slider_group.appendChild(item);
+					});
+					slider.appendChild(slider_group);
+					document.body.appendChild(slider);
+					var _slider = mui(slider).slider();
+				}
+			};
+		</script>
+	</body>
+</html>

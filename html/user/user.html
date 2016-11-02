@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>梦心App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/user.css" />
+	</head>
+	<body class="mui-fullscreen">
+		<div id="user" class="mui-views">
+			<div class="mui-view">
+				<div class="mui-navbar"></div>
+				<div class="mui-pages"></div>
+			</div>
+		</div>
+		<div id="userInfo" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<a class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>返回
+				</a>
+				<h1 class="mui-center mui-title">个人信息</h1>
+			</div>
+			<div class="mui-page-content">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<ul class="mui-table-view mui-table-view-chevron">
+							<li class="mui-table-view-cell mui-media">
+								<a id="userHeadPic" class="mui-navigate-right">头像
+									<img id="headImg" class="mui-action-preview mui-pull-right" src="" />
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a>ID
+									<span class="mui-pull-right">梦心DH</span>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a>帐号
+									<span class="mui-pull-right">666666</span>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a>等级
+									<span class="mui-pull-right">1级</span>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a>梦币
+									<span class="mui-pull-right">0</span>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="#otherUserInfo">
+									其它信息
+								</a>
+							</li>
+						</ul>
+						<ul class="mui-table-view mui-table-view-chevron">
+							<li class="mui-table-view-cell">
+								<a>
+									<span class="mui-icon mui-icon-qq"></span>
+									QQ
+									<span class="mui-pull-right">1471526051</span>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a>
+									<span class="mui-icon mui-icon-phone"></span>
+									手机
+									<span class="mui-pull-right">15602291936</span>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a>
+									<span class="mui-icon mui-icon-email"></span>
+									邮箱
+									<span class="mui-pull-right">15602291936@163.com</span>
+								</a>
+							</li>
+						</ul>
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="#changeUserInfo">
+									<span class="mui-icon mui-icon-gear-filled"></span>
+									修改信息
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="otherUserInfo" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>返回
+				</button>
+				<h1 class="mui-center mui-title">其它信息</h1>
+			</div>
+			<div class="mui-page-content">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">
+								<a>真实姓名
+									<span class="mui-pull-right">ZhangJin</span>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a>英文名
+									<span class="mui-pull-right">Jim·Z</span>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a>性别
+									<span class="mui-pull-right">男</span>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a>出生日期
+									<span class="mui-pull-right">1994/11</span>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a>民族
+									<span class="mui-pull-right">汉族</span>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a>政治面貌
+									<span class="mui-pull-right">团员</span>
+								</a>
+							</li>
+						</ul>
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">
+								<a>住址
+									<span class="mui-pull-right">广东省.广州市.番禺区.华南师范大学大学城校区</span>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a>邮编
+									<span class="mui-pull-right">510000</span>
+								</a>
+							</li>
+						</ul>
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">
+								<a>学校
+									<span class="mui-pull-right">华南师范大学</span>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a>学历
+									<span class="mui-pull-right">本科</span>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a>专业
+									<span class="mui-pull-right">光电信息科学与工程</span>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a>入学时间
+									<span class="mui-pull-right">2013/09/01</span>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a>毕业时间
+									<span class="mui-pull-right">2017/07/01</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="changeUserInfo" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>返回
+				</button>
+				<h1 class="mui-center mui-title">修改信息</h1>
+			</div>
+			<div class="mui-page-content">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<form id="setUserInfo" class="mui-input-group" action="" method="post">
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell mui-input-row">
+									<label>QQ</label>
+									<input type="number" placeholder="1471526051">
+								</li>
+								<li class="mui-table-view-cell mui-input-row">
+									<label>手机</label>
+									<input type="tel" placeholder="15602291936">
+								</li>
+								<li class="mui-table-view-cell mui-input-row">
+									<label>邮箱</label>
+									<input type="email" placeholder="15602291936@163.com">
+								</li>
+							</ul>
+							<div class="userChangeTabOrBardian">
+								<div class="userChangetab">
+									<label>标签</label>
+									<span>多个标签请使用英文字符,分隔</span>
+									<input type="text" value="坚持,不放弃,永不言弃" />
+								</div>
+								<div class="userChangeBardian">
+									<label>个性签名</label>
+									<textarea rows="6" style="overflow: hidden;">这是首页侧滑导航示例，你可以在这里放置任何内容；关闭侧滑菜单有多种方式：1.点击本侧滑菜单页之外的任意位置;2.点击如下红色按钮。</textarea>
+									<span>1/250</span>
+								</div>
+							</div>
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell mui-input-row">
+									<label>真实姓名</label>
+									<input type="text" placeholder="张锦">
+								</li>
+								<li class="mui-table-view-cell mui-input-row">
+									<label>英文名</label>
+									<input type="text" placeholder="Jim">
+								</li>
+								<li class="userSex mui-table-view-cell mui-input-row">
+									<label>性别</label>
+									<div class="mui-radio">
+										<input type="radio" name="sex" checked="checked">男
+									</div>
+									<div class="mui-radio">
+										<input type="radio" name="sex">女
+									</div>
+								</li>
+								<li class="mui-table-view-cell mui-input-row">
+									<label>出生日期</label>
+									<input type="date" value="1994-11-17" style="color: #989898;">
+								</li>
+								<li class="mui-table-view-cell mui-input-row">
+									<label>民族</label>
+									<input type="text" placeholder="汉族">
+								</li>
+								<li class="mui-table-view-cell mui-input-row">
+									<label>政治面貌</label>
+									<input type="text" placeholder="团员">
+								</li>
+							</ul>
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell mui-input-row">
+									<label>住址</label>
+									<input type="text" placeholder="广东省.广州市.番禺区.华南师范大学大学城校区">
+								</li>
+								<li class="mui-table-view-cell mui-input-row">
+									<label>邮编</label>
+									<input type="text" placeholder="510000">
+								</li>
+							</ul>
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell mui-input-row">
+									<label>学校</label>
+									<input type="text" placeholder="华南师范大学">
+								</li>
+								<li class="mui-table-view-cell mui-input-row">
+									<label>学历</label>
+									<input type="text" placeholder="本科">
+								</li>
+								<li class="mui-table-view-cell mui-input-row">
+									<label>专业</label>
+									<input type="text" placeholder="光电信息科学与工程">
+								</li>
+								<li class="mui-table-view-cell mui-input-row">
+									<label>入学时间</label>
+									<input type="date" value="2013-09-01" style="color: #989898;">
+								</li>
+								<li class="mui-table-view-cell mui-input-row">
+									<label>毕业时间</label>
+									<input type="date" value="2017-07-01" style="color: #989898;">
+								</li>
+							</ul>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/mui.view.js "></script>
+		<script>
+			var isChangeHeadImg=false;
+			mui.init({
+				swipeBack:false //启用右滑关闭功能
+			});
+			mui.plusReady(function() {
+				defaultImg();
+				setTimeout(function() {
+					initImgPreview();
+				}, 300);
+			});
+			var viewApi = mui('#user').view({
+				defaultPage: '#userInfo'
+			});
+			mui('.mui-scroll-wrapper').scroll(); //初始化单页的区域滚动
+			var view = viewApi.view;
+			(function($) {
+				//处理view的后退与webview后退
+				var oldBack = $.back;
+				$.back = function() {
+					if (viewApi.canBack()) { //如果view可以后退，则执行view的后退
+						viewApi.back();
+					} else {
+						if(isChangeHeadImg){
+							plus.webview.getWebviewById("html/user/user_me.html").reload();
+						}
+						plus.webview.hide(plus.webview.currentWebview(),'slide-out-right');
+						plus.webview.show(plus.webview.getWebviewById('html/user/user_me.html'));
+					}
+				};
+			})(mui);
+			mui(".mui-table-view-cell").on("tap", "#userHeadPic", function(e) {
+				if(mui.os.plus){
+					var a = [{
+						title: "拍照"
+					}, {
+						title: "从手机相册选择"
+					}];
+					plus.nativeUI.actionSheet({
+						title: "修改头像",
+						cancel: "取消",
+						buttons: a
+					}, function(b) {
+						switch (b.index) {
+							case 0:
+								break;
+							case 1:
+								getImage();
+								break;
+							case 2:
+								galleryImg();
+								break;
+							default:
+								break
+						}
+					})	
+				}
+			});
+			function getImage() {
+				var c = plus.camera.getCamera();
+				c.captureImage(function(e) {
+					plus.io.resolveLocalFileSystemURL(e, function(entry) {
+						var s = entry.toLocalURL() + "?version=" + new Date().getTime();
+						console.log(s);
+						document.getElementById("headImg").src = s;
+						//变更大图预览的src
+						//目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
+						document.querySelector("#__mui-imageview__group .mui-slider-item img").src = s + "?version=" + new Date().getTime();;
+					}, function(e) {
+						console.log("读取拍照文件错误：" + e.message);
+					});
+					isChangeHeadImg=true;
+				}, function(s) {
+					console.log("error" + s);
+				}, {
+					filename: "_doc/head.jpg"
+				});
+			};
+	
+			function galleryImg() {
+				plus.gallery.pick(function(a) {
+					plus.io.resolveLocalFileSystemURL(a, function(entry) {
+						plus.io.resolveLocalFileSystemURL("_doc/", function(root) {
+							root.getFile("head.jpg", {}, function(file) {
+								//文件已存在
+								file.remove(function() {
+									entry.copyTo(root, 'head.jpg', function(e) {
+											var e = e.fullPath + "?version=" + new Date().getTime();
+											document.getElementById("headImg").src = e;
+											//变更大图预览的src
+											//目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
+											document.querySelector("#__mui-imageview__group .mui-slider-item img").src = e + "?version=" + new Date().getTime();;
+										},
+										function(e) {
+											console.log('copy image fail:' + e.message);
+										});
+								}, function() {
+									console.log("delete image fail:" + e.message);
+								});
+							}, function() {
+								//文件不存在
+								entry.copyTo(root, 'head.jpg', function(e) {
+										var path = e.fullPath + "?version=" + new Date().getTime();
+										document.getElementById("headImg").src = path;
+										//变更大图预览的src
+										//目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
+										document.querySelector("#__mui-imageview__group .mui-slider-item img").src = path;
+									},
+									function(e) {
+										console.log('copy image fail:' + e.message);
+									});
+							});
+						}, function(e) {
+							console.log("get _www folder fail");
+						})
+					}, function(e) {
+						console.log("读取拍照文件错误：" + e.message);
+					});
+					isChangeHeadImg=true;
+				}, function(a) {}, {
+					filter: "image"
+				});
+			};
+	
+			function defaultImg() {
+				if(mui.os.plus){
+					plus.io.resolveLocalFileSystemURL("_doc/head.jpg", function(entry) {
+						var s = entry.fullPath + "?version=" + new Date().getTime();;
+						document.getElementById("headImg").src = s;
+					}, function(e) {
+						document.getElementById("headImg").src = '../../img/user/theimg.jpeg';
+					})
+				}else{
+					document.getElementById("headImg").src = '../../img/user/theimg.jpeg';
+				}
+			};
+			document.getElementById("headImg").addEventListener('tap', function(e) {
+				e.stopPropagation();
+			});
+			function initImgPreview() {
+				var imgs = document.querySelectorAll("img.mui-action-preview");
+				imgs = mui.slice.call(imgs);
+				if (imgs && imgs.length > 0) {
+					var slider = document.createElement("div");
+					slider.setAttribute("id", "__mui-imageview__");
+					slider.classList.add("mui-slider");
+					slider.classList.add("mui-fullscreen");
+					slider.classList.add("fullscreenBGcolor");
+					slider.style.display = "none";
+					slider.addEventListener("tap", function() {
+						slider.style.display = "none";
+					});
+					slider.addEventListener("touchmove", function(event) {
+						event.preventDefault();
+					})
+					var slider_group = document.createElement("div");
+					slider_group.setAttribute("id", "__mui-imageview__group");
+					slider_group.classList.add("mui-slider-group");
+					imgs.forEach(function(value, index, array) {
+						//给图片添加点击事件，触发预览显示；
+						value.addEventListener('tap', function() {
+							slider.style.display = "block";
+							_slider.refresh();
+							_slider.gotoItem(index, 0);
+						})
+						var item = document.createElement("div");
+						item.classList.add("mui-slider-item");
+						var a = document.createElement("a");
+						var img = document.createElement("img");
+						img.setAttribute("src", value.src);
+						a.appendChild(img)
+						item.appendChild(a);
+						slider_group.appendChild(item);
+					});
+					slider.appendChild(slider_group);
+					document.body.appendChild(slider);
+					var _slider = mui(slider).slider();
+				}
+			};
+		</script>
+	</body>
+</html>

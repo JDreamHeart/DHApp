@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title>梦心App</title>
+	    <script src="js/mui.min.js"></script>
+	    <link rel="stylesheet" href="css/mui.min.css" />
+	    <link rel="stylesheet" href="css/appMain.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav mui-clearfix indexHeader">
+			<a class="mui-icon mui-icon-bars mui-pull-left white"><span class="iconRedPoint">·</span></a>
+			<a id="search" class="mui-icon mui-icon-search mui-pull-right white"></a>
+			<h1 class="mui-title white">梦心App</h1>
+		</header>
+		<nav class="mui-bar mui-bar-tab" style="border-top: 1px #CECECE solid;">
+			<a id="defaultTab" class="mui-tab-item mui-active" href="html/main/main.html">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">主页</span>
+			</a>
+			<a class="mui-tab-item" href="html/community/community.html">
+				<span class="mui-icon mui-icon-pengyouquan"><span class="iconRedPoint">·</span></span>
+				<span class="mui-tab-label">社区</span>
+			</a>
+			<a class="mui-tab-item" href="html/message/message.html">
+				<span class="mui-icon mui-icon-chat"><span class="mui-hidden mui-badge">4</span></span>
+				<span class="mui-tab-label">消息</span>
+			</a>
+			<a class="mui-tab-item" href="html/user/user_me.html">
+				<span class="mui-icon mui-icon-person"></span>
+				<span class="mui-tab-label">我</span>
+			</a>
+		</nav>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			 //mui初始化
+			mui.init();
+			var subpages = ['html/main/main.html', 'html/community/community.html', 'html/message/message.html', 'html/user/user_me.html'];
+			var subpage_style = {
+				top: '45px',
+				bottom: '51px'
+			};
+			
+			var aniShow = {};
+			
+			 //创建子页面，首个选项卡页面显示，其它均隐藏；
+			mui.plusReady(function() {
+				var self = plus.webview.currentWebview();
+				for (var i = 0; i < 4; i++) {
+					if(!plus.webview.getWebviewById(subpages[i]))
+					{
+						var temp = {};
+						var sub = plus.webview.create(subpages[i], subpages[i], subpage_style);
+						if (i > 0) {
+							sub.hide();
+						}else{
+							temp[subpages[i]] = "true";
+							mui.extend(aniShow,temp);
+						}
+						self.append(sub);
+					}
+				}
+			});
+			 //当前激活选项
+			var activeTab = subpages[0];
+			 //选项卡点击事件
+			mui('.mui-bar-tab').on('tap', 'a', function(e) {
+				var targetTab = this.getAttribute('href');
+				if (targetTab == activeTab) {
+					return;
+				}
+				//显示目标选项卡
+				//若为iOS平台或非首次显示，则直接显示
+				if(mui.os.ios||aniShow[targetTab]){
+					plus.webview.show(targetTab);
+				}else{
+					//否则，使用fade-in动画，且保存变量
+					var temp = {};
+					temp[targetTab] = "true";
+					mui.extend(aniShow,temp);
+					plus.webview.show(targetTab);
+				}
+				//隐藏当前;
+				plus.webview.hide(activeTab);
+				//更改当前活跃的选项卡
+				activeTab = targetTab;
+			});
+			 //自定义事件，模拟点击“首页选项卡”
+			document.addEventListener('gohome', function() {
+				var defaultTab = document.getElementById("defaultTab");
+				//模拟首页点击
+				mui.trigger(defaultTab, 'tap');
+				//切换选项卡高亮
+				var current = document.querySelector(".mui-bar-tab>.mui-tab-item.mui-active");
+				if (defaultTab !== current) {
+					current.classList.remove('mui-active');
+					defaultTab.classList.add('mui-active');
+				}
+			});
+			
+			
+			//侧滑菜单
+			var menu = null,main = null;
+			var showMenu = false;
+			mui.init({
+				swipeBack: false,
+				gestureConfig: {
+					doubletap: true
+				}
+			});
+			mui.plusReady(function() {
+				//仅支持竖屏显示
+				plus.screen.lockOrientation("portrait-primary");
+				main = plus.webview.currentWebview();
+				main.addEventListener('maskClick', closeMenu);
+				//处理侧滑导航，为了避免和子页面初始化等竞争资源，延迟加载侧滑页面；
+				setTimeout(function() {
+					menu = mui.preload({
+						id: 'index-menu',
+						url: 'index-menu.html',
+						styles: {
+							left: 0,
+							width: '80%',
+							zindex: -1
+						},
+						show: {
+							aniShow: 'none'
+						}
+					});
+				}, 200);
+			});
+			var isInTransition = false;
+			/**
+			 * 显示侧滑菜单
+			 */
+			function openMenu() {
+				if (isInTransition) {
+					return;
+				}
+				if (!showMenu) {
+					//侧滑菜单处于隐藏状态，则立即显示出来；
+					isInTransition = true;
+					menu.setStyle({
+						mask: 'rgba(0,0,0,0)'
+					}); //menu设置透明遮罩防止点击
+					menu.show('none', 0, function() {
+						//主窗体开始侧滑并显示遮罩
+						main.setStyle({
+							mask: 'rgba(0,0,0,0.4)',
+							left: '80%',
+							transition: {
+								duration: 150
+							}
+						});
+						mui.later(function() {
+							isInTransition = false;
+							menu.setStyle({
+								mask: "none"
+							}); //移除menu的mask
+						}, 160);
+						showMenu = true;
+					});
+				}
+			};
+			//关闭菜单
+			function closeMenu() {
+				if (isInTransition) {
+					return;
+				}
+				if (showMenu) {
+					//关闭遮罩；
+					//主窗体开始侧滑；
+					isInTransition = true;
+					main.setStyle({
+						mask: 'none',
+						left: '0',
+						transition: {
+							duration: 200
+						}
+					});
+					showMenu = false;
+					//等动画结束后，隐藏菜单webview，节省资源；
+					mui.later(function() {
+						isInTransition = false;
+						menu.hide();
+					}, 300);
+				}
+			};
+			//点击左上角侧滑图标，打开侧滑菜单；
+			document.querySelector('.mui-icon-bars').addEventListener('tap', function(e) {
+				if (showMenu) {
+					closeMenu();
+				} else {
+					openMenu();
+				}
+			});
+			//敲击顶部导航，内容区回到顶部
+			document.querySelector('header').addEventListener('doubletap', function() {
+				main.children()[0].evalJS('mui.scrollTo(0, 100)');
+			});
+			//主界面向右滑动，若菜单未显示，则显示菜单；否则不做任何操作
+			window.addEventListener("swiperight", openMenu);
+			//主界面向左滑动，若菜单已显示，则关闭菜单；否则，不做任何操作；
+			window.addEventListener("swipeleft", closeMenu);
+			//侧滑菜单触发关闭菜单命令
+			window.addEventListener("menu:close", closeMenu);
+			window.addEventListener("menu:open", openMenu);
+			//重写mui.menu方法，Android版本menu按键按下可自动打开、关闭侧滑菜单；
+			mui.menu = function() {
+				if (showMenu) {
+					closeMenu();
+				} else {
+					openMenu();
+				}
+			};
+			//处理右上角关于图标的点击事件；
+			document.getElementById('search').addEventListener('tap', function() {
+				var search=plus.webview.getWebviewById("search.html");
+				if(!search)
+				{
+					var targetHref = "search.html";
+					var styles={
+							top:"0",
+							bottom:"0"
+					};
+					search=plus.webview.create(targetHref,targetHref,styles);
+				}
+				plus.webview.hide(plus.webview.currentWebview().children());
+				plus.webview.show(search,'pop-in');
+			});
+			//首页返回键处理,若侧滑菜单显示，则关闭侧滑菜单,否则，执行mui框架默认的关闭首页功能
+			var _back = mui.back;
+			mui.back = function() {
+				if (showMenu) {
+					closeMenu();
+				} else {
+					_back();
+				}
+			};
+		</script>
+	</body>
+</html>

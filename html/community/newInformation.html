@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>梦心App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<style type="text/css">
+			.mui-content a{
+				color: #333333;
+			}
+			.mui-content a:visited{
+				color: #989898;
+			}
+			.mui-table-view{
+				background-color: inherit;
+			}
+			img.mui-media-object{
+				min-width: 80px;
+				min-height: 60px;
+				max-width: 80px;
+				max-height: 60px;
+			}
+			.mui-table-view-cell{
+				background-color: #FFFFFF;
+			}
+			.mui-table-view-cell>a{
+				height: 102px;
+				border-bottom: 1px #D9D9D9 solid;
+			}
+			.mui-table-view-cell div.mui-clearfix:last-of-type{
+				margin-top: 4px;
+			}
+			.mui-media-body>.mui-ellipsis-2{
+				color: #666666;
+			}
+			.mui-icon{
+				font-size: 16px;
+			}
+			.time{
+				font-size: 13px;
+				margin-left: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left"><span class="mui-icon mui-icon-left-nav"></span>返回</a>
+			<span class="mui-title">最新资讯</span>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<div class="mui-clearfix">
+							<img class="mui-media-object mui-pull-right" src="../../img/eg/F1.jpg">
+							<div class="mui-media-body">
+								资讯1
+								<p class='mui-ellipsis-2'>记忆随着年纪的增长而变化着，但必须谨记心中那前行的初衷。</p>
+							</div>
+						</div>
+						<div class="mui-clearfix">
+							<p class="mui-pull-left">
+								<span class="mui-icon mui-icon-chatboxes"></span>JS技术区
+								<span class="time">2016/10/28</span>
+							</p>
+							<span class="mui-icon mui-icon-minus mui-pull-right"></span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<div class="mui-clearfix">
+							<img class="mui-media-object mui-pull-right" src="../../img/eg/F8.jpg">
+							<div class="mui-media-body">
+								资讯2
+								<p class='mui-ellipsis-2'>记忆随着年纪的增长而变化着，但必须谨记心中那前行的初衷。</p>
+							</div>
+						</div>
+						<div class="mui-clearfix">
+							<p class="mui-pull-left">
+								<span class="mui-icon mui-icon-chatboxes"></span>JS技术区
+								<span class="time">2016/10/28</span>
+							</p>
+							<span class="mui-icon mui-icon-minus mui-pull-right"></span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			//mui初始化
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			mui('.mui-table-view').on('tap','.mui-icon-minus',function(e){
+				var parentLi=this.parentElement.parentElement.parentElement;
+				e.detail.gesture.preventDefault(); //修复iOS 8.x平台存在的bug，使用plus.nativeUI.prompt会造成输入法闪一下又没了
+				var btnArray = ['确定', '取消'];
+				mui.prompt('请输入您对此条资讯的意见：', '不感兴趣', '移除资讯', btnArray, function(e) {
+					if (e.index == 0) {
+						parentLi.innerHTML="";
+						parentLi.removeAttribute("class");
+					}
+				});
+			});
+			mui.back = function() {
+					plus.webview.hide(plus.webview.currentWebview(),'slide-out-right');
+					plus.webview.show(plus.webview.getWebviewById('html/community/community.html'));
+			};
+		</script>
+	</body>
+</html>

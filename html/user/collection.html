@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>梦心App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/icons-extra.css" />
+		<style type="text/css">
+			.mui-content a{
+				color: #333333;
+			}
+			.mui-table-view{
+				background-color: inherit;
+			}
+			.mui-card-header>img{
+				border-radius: 17px;
+			}
+			img.mui-media-object{
+				border-radius: 3px;
+			}
+			.mui-icon-extra{
+				font-size: 16px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav"></a>
+			<span class="mui-title">我的收藏</span>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-card">
+					<div class="mui-card-header mui-card-media">
+						<img src="../../img/eg/F1.jpg" />
+						<div class="mui-media-body">
+							小J
+							<p>发表于 2016-10-19 23:30</p>
+						</div>
+					</div>
+					<div class="mui-card-content">
+						<div class="mui-card-content-inner">
+								<img class="mui-media-object mui-pull-right" src="../../img/eg/F7.jpg">
+								<div class="mui-media-body">
+									下一站，幸福
+									<p class='mui-ellipsis'>能和心爱的人一起度过每一天，是件幸福的事情；可是，那个人在何方？</p>
+								</div>
+						</div>
+					</div>
+					<div class="mui-card-footer">
+						<a class="mui-card-link mui-pull-left"><span class="mui-icon-extra mui-icon-extra-like"></span>赞<span class="mui-badge" style="color: #0060DD;">1</span></a>
+						<a class="mui-card-link"><span class="mui-icon-extra mui-icon-extra-comment"></span>评论<span class="mui-badge" style="color: #0060DD;">2</span></a>
+						<a class="mui-card-link">阅读内容<span class="mui-icon-extra mui-icon-extra-arrowrightcricle"></span></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			//mui初始化
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			mui.back = function() {
+					plus.webview.hide(plus.webview.currentWebview(),'slide-out-right');
+					plus.webview.show(plus.webview.getWebviewById('html/user/user_me.html'));
+			};
+		</script>
+	</body>
+</html>

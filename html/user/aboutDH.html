@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>梦心App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/user.css" />
+		<link rel="stylesheet" href="../../css/feedback.css" />
+		<style type="text/css">
+			#aboutDHMain>.mui-page-content div.mui-title>img{
+				width: 210px;
+				margin-top: -20px;
+			}
+			#aboutDHMain>.mui-page-content div.mui-title>p{
+				margin-top: -20px;
+			}
+			.feedback{
+				min-height: 1600px;
+			}
+		</style>
+	</head>
+	<body class="mui-fullscreen">
+		<div id="aboutDH" class="mui-views">
+			<div class="mui-view">
+				<div class="mui-navbar"></div>
+				<div class="mui-pages"></div>
+			</div>
+		</div>
+		<div id="aboutDHMain" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<a class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>返回
+				</a>
+				<h1 class="mui-center mui-title">关于梦心</h1>
+			</div>
+			<div class="mui-page-content">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="mui-table-view">
+							<div class="mui-table-view-cell mui-center mui-title">
+								<img id="headImg" class="mui-action-preview" src="../../img/logo.gif" />
+								<p>这是一款本人出于兴趣使然的APP制作</p>
+							</div>
+						</div>
+						<ul class="mui-table-view mui-table-view-chevron">
+							<li class="mui-table-view-cell">
+								<a id="share" class="mui-navigate-right">分享推荐</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a id="tel" class="mui-navigate-right">客服电话</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a id="feedback-btn" href="#feedback" class="mui-navigate-right">问题反馈</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a id="welcome" class="mui-navigate-right">欢迎页</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a id="update" class="mui-navigate-right">检查更新</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="feedback" class="mui-page feedback">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>返回
+				</button>
+				<button id="submit" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">发送</button>
+				<h1 class="mui-center mui-title">问题反馈</h1>
+			</div>
+			<div class="mui-page-content">
+				<div class="mui-content-padded">
+					<div class="mui-inline">问题和意见</div>
+					<a class="mui-pull-right mui-inline" href="#popover">
+						快捷输入
+						<span class="mui-icon mui-icon-arrowdown"></span>
+					</a>
+					<!--快捷输入具体内容，开发者可自己替换常用语-->
+					<div id="popover" class="mui-popover">
+						<div class="mui-popover-arrow"></div>
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell"><a href="#">界面显示错乱</a></li>
+									<li class="mui-table-view-cell"><a href="#">启动缓慢，卡出翔了</a></li>
+									<li class="mui-table-view-cell"><a href="#">偶发性崩溃</a></li>
+									<li class="mui-table-view-cell"><a href="#">UI无法直视，丑哭了</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row mui-input-row">
+					<textarea id='question' class="mui-input-clear question" placeholder="请详细描述你的问题和意见..."></textarea>
+				</div>
+				<p>图片(选填,提供问题截图,总大小10M以下)</p>
+				<div id='image-list' class="row image-list"></div>
+				<p>QQ/邮箱</p>
+				<div class="mui-input-row">
+					<input id='contact' type="text" class="mui-input-clear contact" placeholder="(选填,方便我们联系你 )" />
+				</div>
+				<div class="mui-content-padded">
+					<div class="mui-inline">应用评分</div>
+					<div class="icons mui-inline" style="margin-left: 6px;">
+						<i data-index="1" class="mui-icon mui-icon-star"></i>
+						<i data-index="2" class="mui-icon mui-icon-star"></i>
+						<i data-index="3" class="mui-icon mui-icon-star"></i>
+						<i data-index="4" class="mui-icon mui-icon-star"></i>
+						<i data-index="5" class="mui-icon mui-icon-star"></i>
+					</div>
+				</div><br />
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/mui.view.js "></script>
+		<script type="text/javascript" src="../../js/feedback.js" ></script>
+		<script>
+			mui.init({
+				swipeBack:false //启用右滑关闭功能
+			});
+			var viewApi = mui('#aboutDH').view({
+				defaultPage: '#aboutDHMain'
+			});
+			mui('.mui-scroll-wrapper').scroll(); //初始化单页的区域滚动
+			//分享操作
+			var shares = {};
+			mui.plusReady(function() {
+				plus.share.getServices(function(s) {
+					if (s && s.length > 0) {
+						for (var i = 0; i < s.length; i++) {
+							var t = s[i];
+							shares[t.id] = t;
+						}
+					}
+				}, function() {
+					console.log("获取分享服务列表失败");
+				});
+				setTimeout(function() {
+					initImgPreview();
+				},300);
+			});
+			//分享链接点击事件
+			document.getElementById("share").addEventListener('tap', function() {
+				var ids = [{
+						id: "weixin",
+						ex: "WXSceneSession"
+					}, {
+						id: "weixin",
+						ex: "WXSceneTimeline"
+					}, {
+						id: "sinaweibo"
+					}, {
+						id: "tencentweibo"
+					}, {
+						id: "qq"
+					}],
+					bts = [{
+						title: "发送给微信好友"
+					}, {
+						title: "分享到微信朋友圈"
+					}, {
+						title: "分享到新浪微博"
+					}, {
+						title: "分享到腾讯微博"
+					}, {
+						title: "分享到QQ"
+					}];
+				plus.nativeUI.actionSheet({
+					cancel: "取消",
+					buttons: bts
+				}, function(e) {
+					var i = e.index;
+					if (i > 0) {
+						var s_id = ids[i - 1].id;
+						var share = shares[s_id];
+						if (share) {
+							if (share.authenticated) {
+								shareMessage(share, ids[i - 1].ex);
+							} else {
+								share.authorize(function() {
+									shareMessage(share, ids[i - 1].ex);
+								}, function(e) {
+									console.log("认证授权失败：" + e.code + " - " + e.message);
+								});
+							}
+						} else {
+							mui.toast("无法获取分享服务，请检查manifest.json中分享插件参数配置，并重新打包")
+						}
+					}
+				});
+			});
+			function shareMessage(share, ex) {
+				var msg = {
+					extra: {
+						scene: ex
+					}
+				};
+				msg.href = "https://github.com/JimDreamHeart";
+				msg.title = "个人GitHub地址";
+				msg.content = "请大家多多指教，指出我的不足，指正我的错误。谢谢大家支持！";
+				if (~share.id.indexOf('weibo')) {
+					msg.content += "；地址：https://github.com/JimDreamHeart";
+				}
+				msg.thumbs = ["../../img/logo.gif"];
+				share.send(msg, function() {
+					console.log("分享到\"" + share.description + "\"成功！ ");
+				}, function(e) {
+					console.log("分享到\"" + share.description + "\"失败: " + e.code + " - " + e.message);
+				});
+			};
+			//客服电话
+			document.getElementById("tel").addEventListener('tap', function() {
+				if(mui.os.plus){
+					plus.device.dial("15602291936");
+				}else{
+					location.href = 'tel:15602291936';
+				}
+				
+			});
+			//检查更新
+			document.getElementById("update").addEventListener('tap', function() {
+				/*var server = ""; //获取升级描述文件服务器地址
+				mui.getJSON(server, {
+					"appid": plus.runtime.appid,
+					"version": plus.runtime.version,
+					"imei": plus.device.imei
+				}, function(data) {
+					if (data.status) {
+						plus.ui.confirm(data.note, function(i) {
+							if (0 == i) {
+								plus.runtime.openURL(data.url);
+							}
+						}, data.title, ["立即更新", "取　　消"]);
+					} else {
+						mui.toast('梦心App 已是最新版本~')
+					}
+				});*/
+				mui.toast('梦心App 已是最新版本~')
+			});
+			document.getElementById("welcome").addEventListener('tap', function(e) {
+				//显示启动导航
+				mui.openWindow({
+					id: 'welcome',
+					url: 'welcome.html',
+					show: {
+						aniShow: 'fade-in',
+						duration: 300
+					},
+					waiting: {
+						autoShow: false
+					}
+				});
+			});
+			var view = viewApi.view;
+			(function($) {
+				//处理view的后退与webview后退
+				var oldBack = $.back;
+				$.back = function() {
+					if (viewApi.canBack()) { //如果view可以后退，则执行view的后退
+						viewApi.back();
+					} else {
+						plus.webview.hide(plus.webview.currentWebview(),'slide-out-right');
+						plus.webview.show(plus.webview.getWebviewById('html/user/user_me.html'));
+					}
+				};
+			})(mui);
+			document.getElementById("headImg").addEventListener('tap', function(e) {
+				e.stopPropagation();
+			});
+			function initImgPreview() {
+				var imgs = document.querySelectorAll("img.mui-action-preview");
+				imgs = mui.slice.call(imgs);
+				if (imgs && imgs.length > 0) {
+					var slider = document.createElement("div");
+					slider.setAttribute("id", "__mui-imageview__");
+					slider.classList.add("mui-slider");
+					slider.classList.add("mui-fullscreen");
+					slider.classList.add("fullscreenBGcolor");
+					slider.style.display = "none";
+					slider.addEventListener("tap", function() {
+						slider.style.display = "none";
+					});
+					slider.addEventListener("touchmove", function(event) {
+						event.preventDefault();
+					})
+					var slider_group = document.createElement("div");
+					slider_group.setAttribute("id", "__mui-imageview__group");
+					slider_group.classList.add("mui-slider-group");
+					imgs.forEach(function(value, index, array) {
+						//给图片添加点击事件，触发预览显示；
+						value.addEventListener('tap', function() {
+							slider.style.display = "block";
+							_slider.refresh();
+							_slider.gotoItem(index, 0);
+						})
+						var item = document.createElement("div");
+						item.classList.add("mui-slider-item");
+						var a = document.createElement("a");
+						var img = document.createElement("img");
+						img.setAttribute("src", value.src);
+						a.appendChild(img)
+						item.appendChild(a);
+						slider_group.appendChild(item);
+					});
+					slider.appendChild(slider_group);
+					document.body.appendChild(slider);
+					var _slider = mui(slider).slider();
+				}
+			};
+		</script>
+	</body>
+</html>

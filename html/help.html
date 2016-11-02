@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>梦心App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<style type="text/css">
+			.mui-bar{
+				-webkit-box-shadow: none;
+				box-shadow: none;
+			}
+			.mui-content{
+				background-color: #FFFFFF;
+			}
+			.mui-center>img{
+				width: 100%;
+			}
+			.mui-center>img:first-of-type{
+				width: 100%;
+				margin-top: 10px;
+			}
+			.helpTitle{
+				text-align: center;
+				padding: 10px;
+				margin: auto 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left"><span class="mui-icon mui-icon-left-nav"></span>返回</a>
+			<span class="mui-title">帮助</span>
+		</header>
+		<div class="mui-content mui-center">
+			<img src="../img/DCLOUD.png" alt="" />
+			<div class="helpTitle">
+				<p>DCloud 即数字天堂(北京)网络技术有限公司是W3C成员及HTML5中国产业联盟发起单位</p>
+				<span>官方网址：<a href="http://dcloud.io/">http://dcloud.io</a></span>
+			</div>
+			<img src="../img/products.png" />
+			<div class="helpTitle">
+				帮助文档网址：<br />
+				<a href="http://ask.dcloud.net.cn/docs/">http://ask.dcloud.net.cn/docs</a>
+			</div>
+			<div style="position: absolute;left: 50%;bottom: 128px;margin-left: -48px; color: #EE0000;">MUI App下载</div>
+			<img src="../img/qrcode.png" alt="" />
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script>
+			mui.init({
+				swipeBack:true //启用右滑关闭功能
+			});
+		</script>
+	</body>
+</html>

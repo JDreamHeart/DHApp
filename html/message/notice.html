@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>梦心App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<style type="text/css">
+			.mui-content a{
+				color: #333333;
+			}
+			.mui-content a:visited{
+				color: #6641E2;
+			}
+			.mui-content a:active{
+				color: #6641E2;
+			}
+			.mui-table-view{
+				background-color: inherit;
+			}
+			img.mui-media-object{
+				min-width: 70px;
+				min-height: 50px;
+				max-width: 70px;
+				max-height: 50px;
+				border-radius: 3px;
+			}
+			.mui-table-view-cell{
+				margin-bottom: 12px;
+				background-color: #FFFFFF;
+			}
+			.mui-table-view-cell>a{
+				border-top: 1px #E0E0E0 solid;
+				border-bottom: 1px #D9D9D9 solid;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left"><span class="mui-icon mui-icon-left-nav"></span>返回</a>
+			<span class="mui-title">系统通知</span>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<div class="mui-clearfix">
+							<img class="mui-media-object mui-pull-left" src="../../img/eg/F1.jpg">
+							<div class="mui-media-body">
+								铭记1
+								<p class='mui-ellipsis'>记忆随着年纪的增长而变化着，但必须谨记心中那前行的初衷。</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<div class="mui-clearfix">
+							<img class="mui-media-object mui-pull-left" src="../../img/eg/F8.jpg">
+							<div class="mui-media-body">
+								铭记2
+								<p class='mui-ellipsis'>记忆随着年纪的增长而变化着，但必须谨记心中那前行的初衷。</p>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			//mui初始化
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			
+			mui.back = function() {
+					plus.webview.hide(plus.webview.currentWebview(),'slide-out-right');
+					plus.webview.show(plus.webview.getWebviewById('html/message/message.html'));
+			};
+		</script>
+	</body>
+</html>

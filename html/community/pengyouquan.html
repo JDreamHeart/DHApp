@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>梦心App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/icons-extra.css" />
+		<style type="text/css">
+			#pengyouquan{
+				width: 100%;
+			}
+			#headImg{
+				width: 72px;
+				height: 72px;
+				position: absolute;
+				right: 10px;
+				top: 210px;
+				z-index: 1;
+				padding: 1px;
+				border: 1px #BCBCBC solid;
+				background-color: #FFFFFF;
+				border-radius: 2px;
+			}
+			.mui-fullscreen {
+				position: fixed;
+				z-index: 20;
+				background-color: #333333;
+			}
+			.mui-content{
+				background-color: #FFFFFF;
+			}
+			.mui-table-view:first-of-type{
+				margin-top: -5px;
+				padding-top: 36px;
+			}
+			img.mui-media-object{
+				min-width: 42px;
+				min-height: 42px;
+				max-width: 42px;
+				max-height: 42px;
+				border-radius: 2px;
+			}
+			.mui-table-view-cell>a{
+				border-bottom: 1px #EEEEEE solid;
+			}
+			div.mui-media-body>p{
+				margin-top: 2px;
+			}
+			.name{
+				font-size: 17px;
+				color: #002266;
+				opacity: 0.8;
+			}
+			.mui-media-body>.text{
+				margin-top: 4px;
+				white-space: normal;
+				font-size: 16px;
+				color: #333333;
+			}
+			.pictures{
+				margin-top: 6px;
+				margin-right: 10px;
+			}
+			.pictures>img{
+				max-width: 100%;
+				max-height: 210px;
+			}
+			.zanAndComment{
+				margin: 6px 10px 6px 0;
+				font-size: 16px;
+			}
+			.zanAndComment .mui-icon-extra{
+				font-size: 16px;
+			}
+			.comment{
+				display: block;
+				margin-top: 5px;
+				margin-right: 10px;
+				padding-top: 5px;
+				border-top: 1px #E1E1E1 solid;
+			}
+			.comment>label{
+				color: #002266;
+			}
+			.comment button{
+				color: #0060DD;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left"><span class="mui-icon mui-icon-left-nav"></span>返回</a>
+			<span class="mui-title">好友动态</span>
+		</header>
+		<div class="mui-content">
+			<div>
+				<img id="pengyouquan" class="mui-action-preview" src="../../img/eg/F5.jpg" alt="" />
+				<img id="headImg" src="" />
+			</div>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<div id="1" class="mui-clearfix">
+							<img class="mui-media-object mui-pull-left" src="../../img/eg/F1.jpg">
+							<div class="mui-media-body">
+								<span class="name">云之上</span>
+								<p class='text mui-ellipsis-2'>我不知道该说什么，所以在这里随便打一些东西来测试一下。我不知道该说什么，所以在这里随便打一些东西来测试一下。我不知道该说什么，所以在这里随便打一些东西来测试一下。</p>
+								<div class="pictures">
+									<img class="mui-action-preview" src="../../img/eg/F7.jpg" />
+								</div>
+								<p>刚刚</p>
+								<div class="mui-clearfix zanAndComment">
+									<div class="mui-pull-left">
+										<span class="mui-icon-extra mui-icon-extra-like"></span>赞<span class="mui-badge" style="color: #0060DD;">233</span>
+										<span class="mui-hidden" style="font-size: 13px;color: #98A898;">已赞</p>
+									</div>
+									<div class="mui-pull-right">
+										<span class="mui-icon-extra mui-icon-extra-comment"></span>评论<span class="mui-badge" style="color: #0060DD;">666</span>
+									</div>
+								</div>
+								<div class="formContent"></div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<div id="2" class="mui-clearfix">
+							<img class="mui-media-object mui-pull-left" src="../../img/eg/F8.jpg">
+							<div class="mui-media-body">
+								<span class="name">风无痕</span>
+								<p class='text mui-ellipsis-2'>憋说话！</p>
+								<p>10月25日</p>
+								<div class="mui-clearfix zanAndComment">
+									<div class="mui-pull-left">
+										<span class="mui-icon-extra mui-icon-extra-like"></span>赞<span class="mui-badge" style="color: #0060DD;">233</span>
+										<span class="complete mui-hidden" style="font-size: 13px;color: #98A898;">已赞</span>
+									</div>
+									<div class="mui-pull-right">
+										<span class="mui-icon-extra mui-icon-extra-comment"></span>评论<span class="mui-badge" style="color: #0060DD;">666</span>
+									</div>
+								</div>
+								<div class="formContent"></div>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			//mui初始化
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			mui.plusReady(function() {
+				defaultImg();
+				setTimeout(function() {
+					initImgPreview();
+				}, 300);
+			});
+			mui('.mui-media-body').on('tap','.text',function(){
+				this.classList.remove('mui-ellipsis-2');
+			});
+			var commentHTML='<form id="comment" class="comment"><label>我的评论：</label><br /><textarea id="commentContent"></textarea><div class="mui-button-row" style="margin-top: -20px;"><button type="button" class="mui-left mui-btn  mui-btn-link mui-btn-nav mui-pull-left">取消</button><button type="reset" class="mui-center mui-btn  mui-btn-link mui-btn-nav">清除</button><button type="submit" class="mui-right mui-btn  mui-btn-link mui-btn-nav mui-pull-right">发表</button></div></form>';
+			var isCommenting=false;
+			var lastID=0;
+			mui('.zanAndComment').on('tap','.mui-pull-left',function(){
+				this.getElementsByTagName('span')[2].classList.remove('mui-hidden');
+				this.getElementsByClassName('mui-badge')[0].innerHTML++;
+				this.disabled=true;
+			});
+			mui('.zanAndComment').on('tap','.mui-pull-right',function(){
+				formContent(this.parentElement.parentElement.parentElement.id,isCommenting);
+			});
+			mui('.formContent').on('tap','button',function(){
+				var targetButton=this.getAttribute('type');
+				if(targetButton==='button'){
+					formContent(lastID,true);
+				}
+				else if(targetButton==='submit'){
+					document.getElementById('comment').submit();
+					formContent(lastID,true);
+				}
+				else{
+					document.getElementById('commentContent').value="";
+				}
+			});
+			function formContent(id,flag){
+				var id=id+"";
+				if(!flag){
+					document.getElementById(id).getElementsByClassName('formContent')[0].innerHTML=commentHTML;
+					document.getElementById('commentContent').focus();
+					isCommenting=!isCommenting;
+					lastID=id;
+				}
+				else{
+					document.getElementById(lastID).getElementsByClassName('formContent')[0].innerHTML="";
+					if(lastID==id){
+						isCommenting=!isCommenting;
+					}
+					else{
+						document.getElementById(id).getElementsByClassName('formContent')[0].innerHTML=commentHTML;
+						document.getElementById('commentContent').focus();
+						lastID=id;
+					}
+				}
+			};
+			
+			mui.back = function() {
+					plus.webview.hide(plus.webview.currentWebview(),'slide-out-right');
+					plus.webview.show(plus.webview.getWebviewById('html/community/community.html'));
+			};
+			
+			function defaultImg() {
+				if(mui.os.plus){
+					plus.io.resolveLocalFileSystemURL("_doc/head.jpg", function(entry) {
+						var s = entry.fullPath + "?version=" + new Date().getTime();;
+						document.getElementById("headImg").src = s;
+					}, function(e) {
+						document.getElementById("headImg").src = '../../img/user/theimg.jpeg';
+					})
+				}else{
+					document.getElementById("headImg").src = '../../img/user/theimg.jpeg';
+				}
+			};
+			document.getElementById("headImg").addEventListener('tap', function(e) {
+				e.stopPropagation();
+			});
+			function initImgPreview() {
+				var imgs = document.querySelectorAll("img.mui-action-preview");
+				imgs = mui.slice.call(imgs);
+				if (imgs && imgs.length > 0) {
+					var slider = document.createElement("div");
+					slider.setAttribute("id", "__mui-imageview__");
+					slider.classList.add("mui-slider");
+					slider.classList.add("mui-fullscreen");
+					slider.classList.add("fullscreenBGcolor");
+					slider.style.display = "none";
+					slider.addEventListener("tap", function() {
+						slider.style.display = "none";
+					});
+					slider.addEventListener("touchmove", function(event) {
+						event.preventDefault();
+					})
+					var slider_group = document.createElement("div");
+					slider_group.setAttribute("id", "__mui-imageview__group");
+					slider_group.classList.add("mui-slider-group");
+					imgs.forEach(function(value, index, array) {
+						//给图片添加点击事件，触发预览显示；
+						value.addEventListener('tap', function() {
+							slider.style.display = "block";
+							_slider.refresh();
+							_slider.gotoItem(index, 0);
+						})
+						var item = document.createElement("div");
+						item.classList.add("mui-slider-item");
+						var a = document.createElement("a");
+						var img = document.createElement("img");
+						img.setAttribute("src", value.src);
+						a.appendChild(img)
+						item.appendChild(a);
+						slider_group.appendChild(item);
+					});
+					slider.appendChild(slider_group);
+					document.body.appendChild(slider);
+					var _slider = mui(slider).slider();
+				}
+			};
+		</script>
+	</body>
+</html>
